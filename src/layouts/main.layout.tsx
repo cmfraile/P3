@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Slider from "../components/Slider.component";
 import { mainContext } from "../context/main.context";
 
@@ -6,6 +6,8 @@ const MainLayout = ({children}:any) => {
 
   const { effectsBundle } = useContext(mainContext).sliderHook;
   effectsBundle(['R1','R2','R3','R4','R5']);
+
+  useEffect(() => {console.log(window.scrollY)},[window.scrollY])
 
   return(
       <div className="root">
