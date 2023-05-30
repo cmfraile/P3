@@ -22,7 +22,7 @@ const sliderHook = () => {
         Object.keys(clientDimensionYStateObject).map((x,i) => {cuts.push(clientDimensionYStateObject[x] + cuts[i-1]|0)});
         const getMenuLED = () => {
             let menuLED = 0;
-            cuts.map(x => {if((currentScrollPosition+50) > x){menuLED++}});
+            cuts.map(x => {if((currentScrollPosition+75) > x){menuLED++}});
             return menuLED;
         };
         
@@ -34,34 +34,21 @@ const sliderHook = () => {
     };
 
     const effectsBundle = (menuChilds:string[],fetchDeps?:any[]) => {
+
         useLayoutEffect(() => setClientDimensionYStateObject(clientDimensionYState(menuChilds)),
             (fetchDeps) ? [...fetchDeps] : []
         );
+        
         useEffect(() => {
             const callback = () => setLED(window.scrollY) ;
             window.addEventListener('scroll',callback);
             return () => window.removeEventListener('scroll',callback);
-        },[window.scrollY])
+        },[window.scrollY]);
+
     }
 
     return({menuLED,effectsBundle});
 
-}
-
-/*
-const { setLED , 
-            clientDimensionYState , setClientDimensionYStateObject } = useContext(mainContext).sliderHook ;
-
-    
-    useLayoutEffect(() => setClientDimensionYStateObject(clientDimensionYState(menuChilds)),[
-      //fetch
-    ]);
-    
-    useEffect(() => {
-      const callback = () => setLED(window.scrollY) ;
-      window.addEventListener('scroll',callback);
-      return () => window.removeEventListener('scroll',callback);
-    },[window.scrollY])
-*/
+};
 
 export default sliderHook

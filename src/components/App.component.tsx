@@ -7,6 +7,8 @@ import RootTrabajos from "../pages/trabajos.pages";
 import RootContacto from "../pages/contacto.pages";
 
 import '../styles/app.sass'
+import { useContext } from "react";
+import { mainContext } from "../context/main.context";
 
 const App = () => {
 

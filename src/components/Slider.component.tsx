@@ -11,11 +11,11 @@ const Slider = () => {
 
     return(
         <div className="slider">
-            <Slide isActive={true}/>
-            <Slide isActive={true}/>
-            <Slide isActive={true}/>
-            <Slide isActive={true}/>
-            <Slide isActive={true}/>
+            <Slide isActive={menuLED == 0}/>
+            <Slide isActive={menuLED == 1}/>
+            <Slide isActive={menuLED == 2}/>
+            <Slide isActive={menuLED == 3}/>
+            <Slide isActive={menuLED == 4}/>
         </div>
     )
 
