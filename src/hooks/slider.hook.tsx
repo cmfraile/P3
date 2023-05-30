@@ -1,17 +1,15 @@
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
-interface childHeightsAndScroll {menuChilds:{[key:string]:number},scroll:number};
 const sliderHook = () => {
 
     const [
         clientDimensionYStateObject,
         setClientDimensionYStateObject
-    ] = useState<childHeightsAndScroll|undefined>(undefined);
+    ] = useState<{[key:string]:number}|undefined>(undefined);
 
-    const clientDimensionYState = (menuChildsAndScroll:[string[],string]):childHeightsAndScroll => {
-        let caso:childHeightsAndScroll = {menuChilds:{},scroll:0};
-        menuChildsAndScroll[0].map(x => caso.menuChilds[x] = document.getElementById(x)?.clientHeight || 0);
-        caso.scroll = document.getElementById(menuChildsAndScroll[1])?.scrollTop || 0;
+    const clientDimensionYState = (menuChildsAndScroll:string[]):typeof clientDimensionYStateObject => {
+        let caso:{[key:string]:number} = {};
+        menuChildsAndScroll.map(x => caso[x] = document.getElementById(x)?.clientHeight || 0);
         return caso;
     }
 
@@ -20,8 +18,8 @@ const sliderHook = () => {
     const setLED = (currentScrollPosition:number) => {
         
         if(!clientDimensionYStateObject){return}
-        let cuts:number[] = [] ; const { menuChilds } = clientDimensionYStateObject
-        Object.keys(menuChilds).map((x,i) => {cuts.push(menuChilds[x] + cuts[i-1]|0)});
+        let cuts:number[] = [];
+        Object.keys(clientDimensionYStateObject).map((x,i) => {cuts.push(clientDimensionYStateObject[x] + cuts[i-1]|0)});
         const getMenuLED = () => {
             let menuLED = 0;
             cuts.map(x => {if((currentScrollPosition+50) > x){menuLED++}});
@@ -30,18 +28,40 @@ const sliderHook = () => {
         
         //Arreglo provisional
         cuts.shift() ; cuts.pop() ;
-        
+
         setClientDimensionYStateObject((v:any) => ({...v,scroll:currentScrollPosition}));
         const menuLedReturn = getMenuLED() ; if(menuLedReturn !== menuLED){setmenuLED(menuLedReturn)};
     };
 
-    return({
-        setLED,
-        menuLED,
-        clientDimensionYState,
-        setClientDimensionYStateObject,
-    });
+    const effectsBundle = (menuChilds:string[],fetchDeps?:any[]) => {
+        useLayoutEffect(() => setClientDimensionYStateObject(clientDimensionYState(menuChilds)),
+            (fetchDeps) ? [...fetchDeps] : []
+        );
+        useEffect(() => {
+            const callback = () => setLED(window.scrollY) ;
+            window.addEventListener('scroll',callback);
+            return () => window.removeEventListener('scroll',callback);
+        },[window.scrollY])
+    }
+
+    return({menuLED,effectsBundle});
 
 }
+
+/*
+const { setLED , 
+            clientDimensionYState , setClientDimensionYStateObject } = useContext(mainContext).sliderHook ;
+
+    
+    useLayoutEffect(() => setClientDimensionYStateObject(clientDimensionYState(menuChilds)),[
+      //fetch
+    ]);
+    
+    useEffect(() => {
+      const callback = () => setLED(window.scrollY) ;
+      window.addEventListener('scroll',callback);
+      return () => window.removeEventListener('scroll',callback);
+    },[window.scrollY])
+*/
 
 export default sliderHook
