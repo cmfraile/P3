@@ -2,20 +2,12 @@ import { useEffect, useLayoutEffect, useState } from "react";
 
 const sliderHook = () => {
 
-    const [ scrollY , setScrollY ] = useState<number>(window.scrollY)
-
+    const [ scrollY , setScrollY ] = useState<number>(window.scrollY) ;
+    const [ menuLED , setmenuLED ] = useState<number>(0) ;
     const [
         clientDimensionYStateObject,
         setClientDimensionYStateObject
     ] = useState<{[key:string]:number}|undefined>(undefined);
-
-    const clientDimensionYState = (menuChildsAndScroll:string[]):typeof clientDimensionYStateObject => {
-        let caso:{[key:string]:number} = {};
-        menuChildsAndScroll.map(x => caso[x] = document.getElementById(x)?.clientHeight || 0);
-        return caso;
-    }
-
-    const [ menuLED , setmenuLED ] = useState<number>(0);
 
     const setLED = (currentScrollPosition:number) => {
         
@@ -36,6 +28,12 @@ const sliderHook = () => {
     };
 
     const effectsBundle = (menuChilds:string[],fetchDeps?:any[]) => {
+
+        const clientDimensionYState = (menuChildsAndScroll:string[]):typeof clientDimensionYStateObject => {
+            let caso:{[key:string]:number} = {};
+            menuChildsAndScroll.map(x => caso[x] = document.getElementById(x)?.clientHeight || 0);
+            return caso;
+        }
 
         useLayoutEffect(() => setClientDimensionYStateObject(clientDimensionYState(menuChilds)),
             (fetchDeps) ? [...fetchDeps] : []

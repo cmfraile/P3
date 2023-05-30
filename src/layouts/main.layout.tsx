@@ -7,8 +7,6 @@ const MainLayout = ({children}:any) => {
   const { effectsBundle } = useContext(mainContext).sliderHook;
   effectsBundle(['R1','R2','R3','R4','R5']);
 
-  useEffect(() => {console.log(window.scrollY)},[window.scrollY])
-
   return(
       <div className="root">
         <Slider/>
