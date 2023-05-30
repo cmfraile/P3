@@ -2,6 +2,8 @@ import { useEffect, useLayoutEffect, useState } from "react";
 
 const sliderHook = () => {
 
+    const [ scrollY , setScrollY ] = useState<number>(window.scrollY)
+
     const [
         clientDimensionYStateObject,
         setClientDimensionYStateObject
@@ -40,10 +42,10 @@ const sliderHook = () => {
         );
         
         useEffect(() => {
-            const callback = () => setLED(window.scrollY) ;
+            const callback = () => setScrollY(v => { setLED(v) ; return window.scrollY }) ;
             window.addEventListener('scroll',callback);
             return () => window.removeEventListener('scroll',callback);
-        },[window.scrollY]);
+        },[scrollY]);
 
     }
 
