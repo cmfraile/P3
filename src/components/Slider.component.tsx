@@ -1,17 +1,22 @@
-import '../styles/slider.sass'
-
-const Slide = ({isActive}:{isActive:boolean}) => <svg fill={(isActive) ? '#000000' : '#c7c7c7'}
-className='slide' viewBox="0 0 16.00 16.00" xmlns="http://www.w3.org/2000/svg" stroke="#000000" strokeWidth="0.00016"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 0l8 8-8 8-8-8V0h8zM7 2H2v5l6 6 5-5-6-6zM4.5 3C5.328 3 6 3.666 6 4.5 6 5.328 5.334 6 4.5 6 3.672 6 3 5.334 3 4.5 3 3.672 3.666 3 4.5 3z" fillRule="evenodd"></path> </g></svg>
+import { useContext, useEffect, useLayoutEffect } from 'react';
+import { mainContext } from '../context/main.context';
+import '../styles/slider.sass';
+import SvgAdapter from './SvgAdapter.component';
 
 const Slider = () => {
 
+    const { menuLED } = useContext(mainContext).sliderHook ;
+
+    useEffect(() => {},[menuLED])
+
     return(
-        <div className="slider">
-            <Slide isActive={true}/>
-            <Slide isActive={true}/>
-            <Slide isActive={true}/>
-            <Slide isActive={true}/>
-            <Slide isActive={true}/>
+        <div className="slider animate__animated animate__backInLeft animate__slower">
+            <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={0} isActive={menuLED == 0} svgCase='portada'/>
+            <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={1} isActive={menuLED == 1} svgCase='presentación'/>
+            <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={2} isActive={menuLED == 2} svgCase='portada'/>
+            <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={3} isActive={menuLED == 3} svgCase='portada'/>
+            <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={4} isActive={menuLED == 4} svgCase='portada'/>
+            <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={5} isActive={menuLED == 4} svgCase='portada'/>
         </div>
     )
 

@@ -1,22 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useContext } from "react";
 import Slider from "../components/Slider.component";
+import { mainContext } from "../context/main.context";
 
 const MainLayout = ({children}:any) => {
 
-    const scrollCR = useRef<HTMLDivElement>((<div/>).type);
+  const { effectsBundle } = useContext(mainContext).sliderHook;
+  effectsBundle(['R1','R2','R3','R4','R5','R6']);
 
-    useEffect(() => {
-      const callback = () => {console.log(window.scrollY)};
-      window.addEventListener('scroll',callback);
-      return () => window.removeEventListener('scroll',callback);
-    })
-
-    return(
-        <div className="root" id="bodyRow">
-          <Slider/>
-          <div className="content" ref={scrollCR}>{children}</div>
-        </div>
-    )
+  return(
+      <div className="root">
+        <Slider/>
+        <div className="content">{children}</div>
+      </div>
+  )
     
 }
 
