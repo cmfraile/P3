@@ -10,7 +10,7 @@ import { useContext } from "react";
 import { mainContext } from "../context/main.context";
 
 type sliderIcon = 'portada'|'presentación'|'formacion'|'experiencia'|'trabajos'|'contacto' ;
-interface svgadapterprops { stylestring:string , svgCase:sliderIcon , mainColor?:string , index?:any }
+interface svgadapterprops { stylestring:string , svgCase:string , mainColor?:string , index?:any }
 const SvgAdapter = ({stylestring,index,mainColor,svgCase}:svgadapterprops) => {
 
     const onClickIconifSlider = (index:number) => {
