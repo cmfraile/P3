@@ -1,5 +1,4 @@
 import CleanCode from '../assets/svgs/cleancode.svg';
-import SvgAdapter from '../components/SvgAdapter.component';
 import '../styles/pages/portada.sass';
 
 const RootPortada = () => {
