@@ -1,8 +1,9 @@
 //https://www.svgrepo.com/collection/uxwb-bold-line-icons/
 
 import { useEffect } from "react";
-import CleanCode from "../assets/svgs/cleancode";
-import Portada from "../assets/svgs/portada";
+import Portada from "../assets/svgs/portada.svg";
+import Presentacion from "../assets/svgs/presentacion.svg";
+import CleanCode from "../assets/svgs/cleancode.svg";
 
 type sliderIcon = 'portada'|'presentación'|'experiencia'|'trabajos'|'contacto' ;
 type svgCase = 'iconoportada'|sliderIcon
@@ -24,6 +25,7 @@ const SvgAdapter = ({stylestring,index,mainColor,secondColor,isActive,svgCase}:s
         switch(svgCase){
             case 'iconoportada' : return <CleanCode stylestring={stylestring} mainColor={mainColor}/> ;
             case 'portada'      : return <Portada stylestring={stylestring} mainColor={isActiveColorModificator} onClickCallback={() => onClickIconifSlider(index)}/>
+            case 'presentación' : return <Presentacion stylestring={stylestring} mainColor={mainColor} onClickCallback={() => onClickIconifSlider(index)}/>
             default : return <></> ;
         }
     }
