@@ -5,7 +5,7 @@ import { mainContext } from "../context/main.context";
 const MainLayout = ({children}:any) => {
 
   const { effectsBundle } = useContext(mainContext).sliderHook;
-  effectsBundle(['R1','R2','R3','R4','R5']);
+  effectsBundle(['R1','R2','R3','R4','R5','R6']);
 
   return(
       <div className="root">

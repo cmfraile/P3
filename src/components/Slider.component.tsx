@@ -16,6 +16,7 @@ const Slider = () => {
             <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={2} isActive={menuLED == 2} svgCase='portada'/>
             <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={3} isActive={menuLED == 3} svgCase='portada'/>
             <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={4} isActive={menuLED == 4} svgCase='portada'/>
+            <SvgAdapter stylestring='slide' mainColor='#2C3E50' index={5} isActive={menuLED == 4} svgCase='portada'/>
         </div>
     )
 
