@@ -1,5 +1,7 @@
-import FormationCard, { formationProps } from '../components/cards/formacion.card'
-import { formacion } from '../misc/data'
+import Formacion from '../assets/svgs/formacion.svg';
+import FormationCard, { formationProps } from '../components/cards/formacion.card';
+import { formacion , datosDeInteres } from '../misc/data';
+
 import '../styles/pages/formacion.sass'
 
 const RootFormación = () => {
@@ -10,7 +12,8 @@ const RootFormación = () => {
         return false;
     }
 
-    return(<div className="root_component root_formacion" id='R3'>
+    return(
+    <div className="root_component root_formacion" id='R3'>
         <h2>Formación académica</h2>
         <div className="formationList">
             {formacion
@@ -45,7 +48,15 @@ const RootFormación = () => {
                 key={i} materia={x.materia} periodo={x.periodo} entidad={x.entidad} side={x.side} isFirstSide={sideMargin({x,i,a})}/>
             ))}
         </div>
-    </div>)
+        <div className="interestDataAndPlaceholder">
+            <h5>datos de interés</h5>
+            <div className="dataOfInterest">
+                {datosDeInteres.map( (x,i) => (<p key={i} className='data'>{x}</p>))}
+            </div>
+            <Formacion stylestring='placeholder' mainColor='#2C3E50' onClickCallback={() => {}}/>
+        </div>
+    </div>
+    )
 
 }
 

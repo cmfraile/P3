@@ -39,4 +39,8 @@ const formacion:formationProps[] = [
 
 ];
 
-export { formacion }
+const datosDeInteres:string[] = [
+    'Inglés A1 oral , B1 leido/escrito. No certificado.','Especial interés en teletrabajar.','Carnet manipulador de alimentos.'
+].sort()
+
+export { formacion , datosDeInteres }
