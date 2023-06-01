@@ -1,0 +1,44 @@
+@import './palette'
+
+.root_contacto
+    form
+        display: flex
+        flex-direction: column
+        max-width: 70%
+        min-width: 70%
+        .formItem
+            display: flex
+            flex-direction: column
+            min-width: 100%
+            margin: 15px 0px
+            min-width: 100%
+            label
+                margin: 5px 0px
+            small
+                min-height: 10px
+                max-height: 10px
+                margin: 5px 0px
+                min-width: 100%
+                color: $accent1
+                text-align: right
+            input,textarea
+                border: 1px solid $text
+                min-width: 100%
+                background: transparent
+                padding: 5px 30px
+                border-radius: 5px
+                outline: none
+            input
+                min-height: 40px
+            textarea
+                min-height: 250px
+                resize: none
+        .submit
+            min-width: 100%
+            display: flex
+            justify-content: center
+            button
+                background: transparent
+                border: 1px solid $text
+                border-radius: 5px
+                padding: 5px 50px
