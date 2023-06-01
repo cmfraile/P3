@@ -1,11 +1,11 @@
-@import './palette'
+@import '../palette'
 
 .root_contacto
     form
         display: flex
         flex-direction: column
-        max-width: 70%
-        min-width: 70%
+        max-width: 60%
+        min-width: 60%
         .formItem
             display: flex
             flex-direction: column
@@ -42,3 +42,12 @@
                 border: 1px solid $text
                 border-radius: 5px
                 padding: 5px 50px
+
+@media screen and (max-width:768px)
+    .root_contacto
+        form
+            margin: 100px 0px
+            min-width: 90%
+            max-width: 90%
+            .formItem
+                margin: 5px 0px

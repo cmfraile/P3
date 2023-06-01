@@ -1,5 +1,5 @@
 import contactForm from "../hooks/contactForm.hook";
-import '../styles/contact.sass';
+import '../styles/pages/contact.sass'
 
 const RootContacto = () => {
 
