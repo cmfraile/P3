@@ -1,0 +1,35 @@
+@import '../palette'
+
+.root_formacion
+    display: flex
+    flex-direction: column
+    .formationList
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        min-width: 50%
+        max-width: 90%
+        margin: 30px 0px
+        .firstSideMargin
+            margin-top: 80px !important
+        .formationCard
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            min-width: 50%
+            max-width: 50%
+            margin: 20px 0px
+            .materia
+                border-bottom: 1px solid $primary
+                min-width: 100%
+                padding: 5px 0px !important
+            .periodo
+                min-width: 25%
+                border-right: 1px solid $primary
+            .entidad
+                min-width: 75%
+            p
+                text-align: center
+                padding: 5px
+                margin: 0px
