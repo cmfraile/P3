@@ -4,13 +4,13 @@ import { formacion , datosDeInteres } from '../misc/data';
 
 import '../styles/pages/formacion.sass'
 
-const RootFormación = () => {
+export const sideMargin = ({x,a,i}:{x:any,a:any[],i:number}):boolean => {
+    if(!x.side){return false};
+    if(!a[i-1].side && x.side){return true};
+    return false;
+}
 
-    const sideMargin = ({x,a,i}:{x:formationProps,a:formationProps[],i:number}):boolean => {
-        if(!x.side){return false};
-        if(!a[i-1].side && x.side){return true};
-        return false;
-    }
+const RootFormación = () => {
 
     return(
     <div className="root_component root_formacion" id='R3'>

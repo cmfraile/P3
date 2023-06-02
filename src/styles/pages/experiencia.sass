@@ -1,0 +1,44 @@
+@import '../palette'
+
+$mw1:50%
+$mw2:25%
+
+.root_experiencia
+    display: flex
+    flex-direction: row
+    justify-content: center
+    flex-wrap: wrap
+    h2
+        min-width: 100%
+        text-decoration: underline
+        text-align: center
+        margin-bottom: 50px
+    .experienceList
+        min-width: $mw1
+        max-width: $mw1
+        .experienceCard
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            margin: 20px 0px
+            p
+                padding: 5px
+                text-align: center
+                margin: 0px
+            .puesto
+                min-width: 100%
+                border-bottom: 1px solid $primary
+                text-align: center
+            .inicio
+                min-width: 20%
+                border-right: 1px solid $primary
+            .periodo
+                min-width: 30%
+                border-right: 1px solid $primary
+            .lugar
+                min-width: 50%
+            .descripcion
+                border-top: 1px solid $primary
+                min-width: 100%
+                text-align: justify
+            
