@@ -3,12 +3,16 @@ import { ExperienciaCard } from '../components/cards/experiencia.card';
 import { experiencia } from '../misc/data';
 import '../styles/pages/experiencia.sass';
 import { sideMargin } from './formacion.pages';
+import Experiencia from '../assets/svgs/experiencia.svg';
 
 const RootExperiencia = () => {
 
     return(
         <div className="root_component root_experiencia" id='R4'>
             <h2>Experiencia profesional:</h2>
+            <div className="placeholderColumn">
+                <Experiencia stylestring='placeholder' mainColor='#2C3E50' onClickCallback={() => {}}/>
+            </div>
             <div className="experienceList">
                 {experiencia
                 .sort( (a,b) => a.customIndex - b.customIndex)
