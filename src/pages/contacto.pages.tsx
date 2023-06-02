@@ -8,6 +8,8 @@ const RootContacto = () => {
     return(
         <div className="root_component root_contacto" id='R6'>
 
+            <h2>Contacto:</h2>
+
             <form onSubmit={submitMiddleware}>
 
                 <div className="formItem">
