@@ -1,4 +1,4 @@
-import '../styles/pages/trabajos.sass';
+import '../styles/pages/trabajos.sass'
 import TrabajoCard from '../components/cards/trabajo.card';
 import Trabajos from '../assets/svgs/trabajos.svg';
 
@@ -16,6 +16,7 @@ const RootTrabajos = () => {
                                             side={x.side} customIndex={x.customIndex}/>)
                 }
             </div>
+            <Trabajos stylestring='placeholder' mainColor='#2C3E50' onClickCallback={() => {}}/>
         </div>
     )
 

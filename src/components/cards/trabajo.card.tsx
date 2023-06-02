@@ -4,7 +4,7 @@ export interface trabajoProps { foto:string , nombre:string , estado:string , de
 const TrabajoCard = ({foto,nombre,estado,descripcion,despliegueURL,side,repoURL}:trabajoProps) => {
 
     return(
-        <div className='trabajocard'>
+        <div className={'trabajoCard'}>
             <div className="foto bgReset" style={{backgroundImage: `url(${foto})`}}/>
             <div className="workData">
                 <p className="nombre">{nombre}</p>

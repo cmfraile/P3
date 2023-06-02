@@ -45,6 +45,8 @@ const sliderHook = () => {
             return () => window.removeEventListener('scroll',callback);
         },[scrollY]);
 
+        useEffect(() => console.log(menuLED),[menuLED])
+
         useEffect(() => window.scroll(0,0),[])
 
     }
