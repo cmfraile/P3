@@ -1,5 +1,6 @@
 import '../styles/pages/trabajos.sass';
 import TrabajoCard from '../components/cards/trabajo.card';
+import Trabajos from '../assets/svgs/trabajos.svg';
 
 import { trabajos } from '../misc/data';
 
