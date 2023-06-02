@@ -110,9 +110,27 @@ const trabajos:trabajoProps[] = [
       estado:'05 - 2019',
       descripcion:'Pequeño proyecto entre amigos que tomamos tras documentarme en internet sobre este hobby derivado del aeromodelismo. El resultado fue espectacular. Fue mi primera experiencia de holgado aprendizaje autodidacta a través de internet.',
       despliegueURL:'https://photos.app.goo.gl/gcjNkc7Gq6PAcid47',
-      side:false,
-      customIndex:10
+      side:true,
+      customIndex:13
     },
+    {
+      foto:`src/assets/fototrabajos/pf3.jpg`,
+      nombre:'Portfolio 3',
+      estado:'06 - 2023',
+      descripcion:'Portfolio realizado en una semana con el cual representar mejor mi trabajo. Un desarrollador hace cambios significativos en su trabajo cada 6 meses, con lo que un portfolio con mas de un año y medio dificilmente me logre representar en la actualidad. Aqui busco un diseño minimalista y claro, donde menos es mas. Lo lanzo a la par que la beta de mi siguiente aplicación, para mejorar mi empleabilidad.',
+      repoURL:'https://github.com/cmfraile/P3',
+      side:true,
+      customIndex:9
+    },
+    {
+        foto:`src/assets/fototrabajos/cleanSolid.jpg`,
+        nombre:'Clean code & SOLID',
+        estado:'12 - 2022',
+        descripcion:'Apuntes acerca de lo aprendido de código limpio, patrones, antipatrones y SOLID . Sigue el repo si eres desarrollador, pues te ayudara en tus futuros proyectos, te lo garantizo.',
+        repoURL:'https://github.com/cmfraile/SOLID-CleanCode',
+        side:false,
+        customIndex:3
+      },
     {
         foto:`src/assets/fototrabajos/backend.jpg`,
         nombre:'Node backend shell',
@@ -121,23 +139,23 @@ const trabajos:trabajoProps[] = [
         repoURL:'https://github.com/cmfraile/MyNodeBackendShell',
         side:false,
         customIndex:2
-      },
+    },
     {
       foto:`src/assets/fototrabajos/pf1.jpg`,
       nombre:'Portfolio 1.0',
       estado:'03 - 2021',
       descripcion:'Fue mi primer portfolio realizado tras aprender Python, Django y refrescar HTML/CSS . Una experiencia muy didáctica e importante que me mostró la razón de porque las aplicaciones se dividen en varias partes y hacen uso de varias tecnologías. A partir de aqui empecé a definir mi stack y afinar mis habilidades con esta nueva orientación.',
       repoURL:'https://github.com/cmfraile/WebPersonalDjango',
-      side:false,
-      customIndex:11
+      side:true,
+      customIndex:7
     },
     {
       foto:`src/assets/fototrabajos/pf2.png`,
       nombre:'Portfolio 2.0',
       estado:'03 - 2022',
       descripcion:'Proyecto con el cual busque consolidar mis conocimientos del MEAN stack tras aprender Node.js, API REST y MongoDB . Es el Portfolio que estas viendo actualmente y el cual esta pasando por mantenimiento de cara a convertirlo en MERN y afianzar mis conocimientos de React.',
-      side:false,
-      customIndex:12
+      side:true,
+      customIndex:8
     },
     {
       foto:`src/assets/fototrabajos/n1.png`,
@@ -145,21 +163,21 @@ const trabajos:trabajoProps[] = [
       estado:'06 - 2021',
       descripcion:'Hackaton organizada por NUWE con motivo de su inauguración. Fue mi primera experiencia en hackatones y pese a que no permitian usar Angular, pues el reto era de React, acepté el reto por llevarme la experiencia.',
       despliegueURL:'https://github.com/cmfraile/HackatonNuwe2021FrontCMFG',
-      side:false,
-      customIndex:12,
+      side:true,
+      customIndex:6,
     },
     {
-      foto:`src/assets/fototrabajosbdt.jpg`,
+      foto:`src/assets/fototrabajos/bdt.jpg`,
       nombre:'Barcelona Digital Talent - Hackaton',
       estado:'11 - 2021',
       descripcion:'Hackatón organizada por el BDT y bajo la plataforma de NUWE. En ella teniamos que hacer una pasarela de pago similar a la del ejercicio. Completarlo y ademas añadirle unos cuantos detalles vistosos me hizo quedar primero de entre 40 participantes. Una gran experiencia con la curiosidad de "ganar" la hackatón.',
       despliegueURL:'https://cmfraile.github.io/Hackaton---Jump2Digital---BCN---Carlos-Fraile/',
       repoURL:'https://github.com/cmfraile/Hackaton---Jump2Digital---BCN---Carlos-Fraile',
-      side:false,
-      customIndex:13
+      side:true,
+      customIndex:5
     },
     {
-      foto:`src/assets/pgw.png`,
+      foto:`src/assets/fototrabajos/pgw.jpg`,
       nombre:'Party game web',
       estado:'En desarrollo',
       descripcion:'Pequeño proyecto para afianzar Redux el cual puedo publicar una beta para Agosto, para el uso y disfrute de ustedes. Con el he aprendido a usar esta tecnologia. Mi intención es presentarme con esta app para mejorar mi empleabilidad, mostrar mis capacidades, y monetizarlo en última instancia.',
@@ -167,30 +185,30 @@ const trabajos:trabajoProps[] = [
       customIndex:1
     },
     {
-      foto:`src/assets/bg.png`,
+      foto:`src/assets/fototrabajos/bg.png`,
       nombre:'Battle Gamers GAMING BAR',
-      estado:'Finalizado',
+      estado:'04 - 2023',
       descripcion:'Proyecto con el cual he aprendido la mayor parte de los fundamentos BackEnd. En otro repositorio muestro un cascarón del BackEnd que aqui realicé, con abstracciones y sugerencias para resolver el problema que aqui tuve.',
-      side:false,
-      customIndex:14
+      side:true,
+      customIndex:10
     },
     {
-      foto:`src/assets/ma.jpg`,
+      foto:`src/assets/fototrabajos/ma.jpg`,
       nombre:'MahApps',
       estado:'Aparcada',
       descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, pero sobretodo todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en tu stack, apréndelo, y vuelve a la App cuando tengas lo que necesites. En un futuro puedo hacer esta app mucho mejor.',
       repoURL:'https://github.com/cmfraile/MahApps',
-      side:false,
-      customIndex:15
+      side:true,
+      customIndex:12
     },
     {
-      foto:`src/assets/bico.jpg`,
+      foto:`src/assets/fototrabajos/bico.jpg`,
       nombre:'Bico arts',
       estado:'En desarrollo',
       descripcion:'Encargo freelance de una web portfolio para un artista, donde se refleje su trabajo, sus tarifas, formulario de contacto y redes sociales. Tendrá panel de administración con autenticación para gestionar el contenido de la web. Una web vistosa, llamativa y decorada con sus motivos que trate de ser una obra de arte en si misma tal y como desea el cliente.',
-      side:false,
-      customIndex:16
+      side:true,
+      customIndex:11
     },
   ];
 
-export { formacion , datosDeInteres , experiencia }
+export { formacion , datosDeInteres , experiencia , trabajos }
