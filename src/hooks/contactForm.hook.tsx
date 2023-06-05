@@ -45,6 +45,7 @@ const contactForm = () => {
         }else{
             setErrors({...initialErrors})
             alert(`Su mensaje ha sido enviado`) ; onResetForm() ;
+            window.scroll(0,0)
             //Si se envia
         }
 

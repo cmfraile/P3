@@ -16,7 +16,7 @@ const RootTrabajos = () => {
                                             side={x.side} customIndex={x.customIndex}/>)
                 }
             </div>
-            <Trabajos stylestring='placeholder' mainColor='#2C3E50' onClickCallback={() => {}}/>
+            <Trabajos stylestring='placeholder' mainColor='#2C3E50'/>
         </div>
     )
 

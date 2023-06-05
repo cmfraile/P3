@@ -11,7 +11,7 @@ const RootExperiencia = () => {
         <div className="root_component root_experiencia" id='R4'>
             <h2>Experiencia profesional:</h2>
             <div className="placeholderColumn">
-                <Experiencia stylestring='placeholder' mainColor='#2C3E50' onClickCallback={() => {}}/>
+                <Experiencia stylestring='placeholder' mainColor='#2C3E50'/>
             </div>
             <div className="experienceList">
                 {experiencia

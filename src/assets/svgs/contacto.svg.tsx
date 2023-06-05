@@ -1,6 +1,6 @@
 //{stylestring,mainColor,onClickCallback}:{stylestring:string,mainColor:any,onClickCallback:() => void}
 
-const Contacto = ({stylestring,mainColor,onClickCallback}:{stylestring:string,mainColor:any,onClickCallback:() => void}) => {
+const Contacto = ({stylestring,mainColor,onClickCallback}:{stylestring:string,mainColor:any,onClickCallback?:() => void}) => {
     return (
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000" className={stylestring} onClick={onClickCallback}>
           <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>

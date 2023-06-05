@@ -53,7 +53,7 @@ const RootFormación = () => {
             <div className="dataOfInterest">
                 {datosDeInteres.map( (x,i) => (<p key={i} className='data'>{x}</p>))}
             </div>
-            <Formacion stylestring='placeholder' mainColor='#2C3E50' onClickCallback={() => {}}/>
+            <Formacion stylestring='placeholder' mainColor='#2C3E50'/>
         </div>
     </div>
     )
