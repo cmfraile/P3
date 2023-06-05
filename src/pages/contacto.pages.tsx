@@ -3,7 +3,7 @@ import '../styles/pages/contact.sass'
 
 const RootContacto = () => {
 
-    const { formState : {email,name,subject,body} , onInputChange , submitMiddleware , errors } = contactForm() ;
+    const { formState : {email,name,subject,body} , onInputChange , submitMiddleware , errors , isEnabled } = contactForm() ;
 
     return(
         <div className="root_component root_contacto" id='R6'>
@@ -36,7 +36,7 @@ const RootContacto = () => {
                     { (errors.body) ? <small className="form-text">Mensaje demasiado corto</small> : <small className="smallVoid"></small> }
                 </div>
 
-                <div className="submit"><button type='submit'>Enviar</button></div>
+                <div className="submit"><button type='submit' disabled={!isEnabled}>Enviar</button></div>
 
             </form>
 

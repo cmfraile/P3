@@ -28,6 +28,7 @@ const contactForm = () => {
             onInputChange , onResetForm } = useForm(initialForm);
 
     const [ errors , setErrors ] = useState<typeof initialErrors>(initialErrors) ;
+    const [ isEnabled , setIsEnabled ] = useState<boolean>(true)
 
     const submitMiddleware =
     (e:React.FormEvent<HTMLFormElement>) => {
@@ -45,20 +46,17 @@ const contactForm = () => {
             //No se envia
         }else{
 
-            
-            send(
-                'service_ee4nk1s',
-                'template_hzc9mvq',
-                {...formState},
-                'SlreEML6ED8glhoud')
+            setIsEnabled(v => false);
+            send('service_ee4nk1s','template_hzc9mvq',{...formState},'SlreEML6ED8glhoud')
             .then((res:EmailJSResponseStatus) => {
                 setErrors({...initialErrors});
                 alert(`Su mensaje ha sido enviado`);
                 onResetForm();
                 window.scroll(0,0);
+                setTimeout(() => setIsEnabled(v => true),30000)
             })
             .catch(console.log);
-
+            
         }
 
     }
@@ -68,7 +66,7 @@ const contactForm = () => {
     return({    
                 formState , onInputChange ,
                 submitMiddleware ,
-                errors
+                errors,isEnabled
             })
                 
 
