@@ -42,12 +42,14 @@ const contactForm = () => {
         })
     
         if( Object.keys(formState).filter(x => errors[x]).length > 0 ){
+
             setErrors({...errors})
             //No se envia
+
         }else{
 
             setIsEnabled(v => false);
-            send('service_ee4nk1s','template_hzc9mvq',{...formState},'SlreEML6ED8glhoud')
+            send('service_ee4nk1s','template_hzc9mvq',formState,'SlreEML6ED8glhoud')
             .then((res:EmailJSResponseStatus) => {
                 setErrors({...initialErrors});
                 alert(`Su mensaje ha sido enviado`);
@@ -56,7 +58,7 @@ const contactForm = () => {
                 setTimeout(() => setIsEnabled(v => true),30000)
             })
             .catch(console.log);
-            
+
         }
 
     }
