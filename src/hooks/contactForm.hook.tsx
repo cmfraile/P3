@@ -1,5 +1,6 @@
 import regularExpressions from "../misc/regularExpressions";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { EmailJSResponseStatus , init , send } from "@emailjs/browser";
 
 const useForm = (initialForm:{[key:string]:string},regexp?:RegExp) => {
 
@@ -43,13 +44,26 @@ const contactForm = () => {
             setErrors({...errors})
             //No se envia
         }else{
-            setErrors({...initialErrors})
-            alert(`Su mensaje ha sido enviado`) ; onResetForm() ;
-            window.scroll(0,0)
-            //Si se envia
+
+            
+            send(
+                'service_ee4nk1s',
+                'template_hzc9mvq',
+                {...formState},
+                'SlreEML6ED8glhoud')
+            .then((res:EmailJSResponseStatus) => {
+                setErrors({...initialErrors});
+                alert(`Su mensaje ha sido enviado`);
+                onResetForm();
+                window.scroll(0,0);
+            })
+            .catch(console.log);
+
         }
 
     }
+
+    useEffect(() => init('SlreEML6ED8glhoud'),[])
 
     return({    
                 formState , onInputChange ,
