@@ -9,6 +9,7 @@ const sliderHook = () => {
         setClientDimensionYStateObject
     ] = useState<{[key:string]:number}|undefined>(undefined);
 
+    /*
     const setLED = (currentScrollPosition:number) => {
         
         if(!clientDimensionYStateObject){return}
@@ -22,15 +23,39 @@ const sliderHook = () => {
             return menuLED;
         };
         
-        /*
-        cuts.shift();
-        cuts.pop();
-        */
+        
+        //cuts.shift();
+        //cuts.pop();
+        
 
         setClientDimensionYStateObject((v:any) => ({...v,scroll:currentScrollPosition}));
         const menuLedReturn = getMenuLED() ; if(menuLedReturn !== menuLED){setmenuLED(menuLedReturn)};
 
     };
+    */
+
+
+    const setLED = (currentScrollPosition:number) => {
+
+        if(!clientDimensionYStateObject){ return } ;
+        setClientDimensionYStateObject((v:any) => ({...v,scroll:currentScrollPosition})) ;
+
+        let cuts1 = Object.keys(clientDimensionYStateObject).filter(x => x !== 'scroll').sort()
+        .map(x => clientDimensionYStateObject[x]);
+
+        cuts1 = cuts1.map((x,i,a) => (a.slice(0,i).reduce((a,b) => a+b,0)));
+
+        const leds:boolean[] = [];
+        cuts1.forEach( x => (scrollY > x) ? leds.push(true) : leds.push(false) );
+
+        if( leds.filter(x => !x).length !== 0 ){
+            if( leds.indexOf(false)-1 !== menuLED ){ setmenuLED(v => leds.indexOf(false)-1) };
+        }else{
+            if(leds.length !== menuLED){ setmenuLED(v => leds.length-1) }
+        }
+        
+
+    }
 
     const effectsBundle = (menuChilds:string[],fetchDeps?:any[]) => {
 
@@ -40,7 +65,7 @@ const sliderHook = () => {
             return caso;
         }
 
-        useLayoutEffect(() => setClientDimensionYStateObject(clientDimensionYState(menuChilds)),
+        useLayoutEffect(() => setClientDimensionYStateObject(v => clientDimensionYState(menuChilds)),
             (fetchDeps) ? [...fetchDeps] : []
         );
         
@@ -50,7 +75,7 @@ const sliderHook = () => {
             return () => window.removeEventListener('scroll',callback);
         },[scrollY]);
 
-        //useEffect(() => {console.clear() ; console.log(clientDimensionYStateObject)},[scrollY])
+        //useEffect(() => {console.clear() ; console.log(scrollY)},[scrollY])
 
         useEffect(() => window.scroll(0,0),[])
 
