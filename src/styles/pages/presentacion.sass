@@ -1,0 +1,29 @@
+@import '../palette'
+
+$mw1:25%
+$mw2:50%
+    
+.root_presentacion
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    .about,.skills
+        margin: 0px 50px
+    .about
+        min-width: $mw1
+        max-width: $mw1
+        p
+            margin: 0px
+            padding: 0px
+            text-align: justify
+            text-indent: 15%
+            font-size: 1.15rem
+    .skills
+        display: flex
+        justify-content: center
+        h5
+            text-decoration: underline
+        min-width: $mw2
+        max-width: $mw2
