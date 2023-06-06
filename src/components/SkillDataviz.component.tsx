@@ -1,7 +1,8 @@
+import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack } from 'victory';
 
-interface dataForDataVizprops {[key:string]:{img:string,practica:number,experiencia:number}};
+interface dataForDataVizProps {img:string,practica:number,experiencia:number};
 const urlBase = 'src/assets/stackIcons'
-const data:dataForDataVizprops = {
+const data:{[key:string]:dataForDataVizProps} = {
   'angular':{img:`${urlBase}/angular.png`,practica:26,experiencia:3},
   'bootstrap':{img:`${urlBase}/bootstrap.png`,practica:36,experiencia:12},
   'css3':{img:`${urlBase}/css3.png`,practica:36,experiencia:12},
@@ -23,5 +24,52 @@ const data:dataForDataVizprops = {
 }
 
 const SkillDataviz = () => {
-  
+
+  const CustomTick = ({img}:{img:string}) => <img src={img} alt="Custom tick" style={{ width: '30px', height: '3px' }}/>
+
+  const parsed:dataForDataVizProps[] = Object.keys(data)
+  .sort( (a,b) => {
+    const accumulated = (index:string) => data[index].experiencia + data[index].practica ;
+    if(accumulated(a) < accumulated(b)){return 1};
+    if(accumulated(a) > accumulated(b)){return -1};
+    return 0
+  })
+  .map( x => {
+    const { img , practica , experiencia } = data[x];
+    return {name:x,img,practica,experiencia,suma:practica+experiencia}
+  })
+
+  return(
+      <VictoryChart>
+
+        <VictoryAxis
+          dependentAxis
+          label='años'
+          style={{
+            tickLabels: {angle: 270, fontSize: 8},
+            axisLabel: {angle: 270, fontSize: 8}
+          }}
+          tickFormat={(x:number) => (Math.floor(x/12))}
+        />
+
+        <VictoryAxis
+          label='tecnologias'
+          tickFormat={(t) => t}
+          style={{
+            tickLabels: {angle: 270, fontSize: 8},
+            axisLabel: {angle: 180, fontSize: 8}
+          }}
+        />
+
+        <VictoryStack>
+          <VictoryBar data={parsed} y='experiencia' x='name'/>
+          <VictoryBar data={parsed} y='practica' x='name'/>
+        </VictoryStack>
+
+
+      </VictoryChart>
+  )
+
 }
+
+export default SkillDataviz
