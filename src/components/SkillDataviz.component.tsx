@@ -1,12 +1,12 @@
-import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack , VictoryLegend , VictoryLabel } from 'victory';
+import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack } from 'victory';
 import { skillsData , dataForDataVizProps } from '../misc/data';
 
 const Legend = () => {
 
   return(
     <div className="legendChart">
-      <p className="experiencia">experiencia</p>
-      <p className="practica">practica</p>
+      <p className="experiencia">▣ experiencia</p>
+      <p className="practica">▣ practica</p>
     </div>
   )
 
@@ -18,7 +18,7 @@ const SkillDataviz = () => {
   const CustomTickLabel = (props:any) => {
     const { x,y,text } = props;
     return (
-      <image x={x-7} y={y}
+      <image x={x-8} y={y}
       href={skillsData[text].img}
       width={15}
       />
@@ -45,19 +45,6 @@ const SkillDataviz = () => {
         }}
       >
 
-        <VictoryLegend 
-          x={300} y={0}
-          orientation='vertical'
-          style={{
-            parent:{transform:'rotate(90deg)'},
-            labels:{fontFamily:'Montserrat'}
-          }}
-          data={[
-            { name: "Experiencia", symbol: { fill: '#E74C3C' , type:'square' } },
-            { name: "Practica", symbol: { fill: '#27AE60' , type:'square' } },
-          ]}
-        />
-
         <VictoryAxis
           dependentAxis
           label='años'
@@ -72,10 +59,17 @@ const SkillDataviz = () => {
           label='tecnologías'
           tickLabelComponent={<CustomTickLabel/>}
           style={{
-            axis:{stroke:'none'},
-            axisLabel: {angle: 180,fontSize:15,fontFamily:'Montserrat',margin:'auto'},
+            axis: { stroke: 'none' },
+            axisLabel: {
+              angle: 180,
+              fontSize: 15,
+              fontFamily: 'Montserrat',
+              margin: 'auto',
+              padding: 50 // Añade el margen deseado aquí
+            },
           }}
         />
+
 
         <VictoryStack>
           <VictoryBar colorScale={['#E74C3C']} data={parsed} barRatio={0.75} y='experiencia' x='name'/>
@@ -84,6 +78,7 @@ const SkillDataviz = () => {
 
 
       </VictoryChart>
+      <Legend/>
     </>
   )
 
