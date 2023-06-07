@@ -142,7 +142,7 @@ const trabajos:trabajoProps[] = [
     },
     {
       foto:`src/assets/fototrabajos/pf3.jpg`,
-      nombre:'Portfolio 3',
+      nombre:'Portfolio 3 [ β ]',
       estado:'06 - 2023',
       descripcion:'Portfolio realizado en una semana con el cual representar mejor mi trabajo. Un desarrollador hace cambios significativos en su trabajo cada 6 meses, con lo que un portfolio con mas de un año y medio dificilmente me logre representar en la actualidad. Aqui busco un diseño minimalista y claro, donde menos es mas. Lo lanzo a la par que la beta de mi siguiente aplicación, para mejorar mi empleabilidad.',
       repoURL:'https://github.com/cmfraile/P3',
