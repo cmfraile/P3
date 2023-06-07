@@ -8,8 +8,6 @@ import RootContacto from "../pages/contacto.pages";
 import RootFormación from "../pages/formacion.pages";
 
 import '../styles/app.sass'
-import { useContext } from "react";
-import { mainContext } from "../context/main.context";
 
 const App = () => {
 

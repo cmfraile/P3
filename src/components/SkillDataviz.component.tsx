@@ -1,4 +1,4 @@
-import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack } from 'victory';
+import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack , VictoryTheme, VictoryLegend } from 'victory';
 
 interface dataForDataVizProps {img:string,practica:number,experiencia:number};
 const urlBase = 'src/assets/stackIcons'
@@ -23,9 +23,31 @@ const data:{[key:string]:dataForDataVizProps} = {
   'sass':{img:`${urlBase}/sass.png`,practica:36,experiencia:12},
 }
 
+const Legend = () => {
+
+  return(
+    <div className="legendChart">
+      <p className="practica">practica</p>
+      <p className="experiencia">experiencia</p>
+    </div>
+  )
+
+}
+
+/*<image x={x} y={y} href="ruta/a/la/imagen.png" width={12} height={12} />*/
 const SkillDataviz = () => {
 
-  const CustomTick = ({img}:{img:string}) => <img src={img} alt="Custom tick" style={{ width: '30px', height: '3px' }}/>
+  const CustomTickLabel = (props:any) => {
+    const { x,y,text } = props;
+    console.log({props})
+    return (
+      <image x={x} y={y} 
+      href={data[text].img}
+      width={10} height={10}
+      style={{margin:'0px',padding:'0px'}}
+      />
+    );
+  }
 
   const parsed:dataForDataVizProps[] = Object.keys(data)
   .sort( (a,b) => {
@@ -40,7 +62,10 @@ const SkillDataviz = () => {
   })
 
   return(
-      <VictoryChart>
+    <>
+      <VictoryChart
+        theme={VictoryTheme.material}
+      >
 
         <VictoryAxis
           dependentAxis
@@ -53,12 +78,10 @@ const SkillDataviz = () => {
         />
 
         <VictoryAxis
-          label='tecnologias'
           tickFormat={(t) => t}
           style={{
-            tickLabels: {angle: 270, fontSize: 8},
-            axisLabel: {angle: 180, fontSize: 8}
           }}
+          tickLabelComponent={<CustomTickLabel/>}
         />
 
         <VictoryStack>
@@ -68,6 +91,8 @@ const SkillDataviz = () => {
 
 
       </VictoryChart>
+      <Legend/>
+    </>
   )
 
 }
