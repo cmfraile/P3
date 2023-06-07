@@ -1,7 +1,7 @@
 import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack } from 'victory';
 import { skillsData , dataForDataVizProps } from '../misc/data';
 
-const Legend = () => {
+export const Legend = () => {
 
   return(
     <div className="legendChart">
@@ -38,7 +38,6 @@ const SkillDataviz = () => {
   })
 
   return(
-    <>
       <VictoryChart
         style={{
           parent:{minWidth:'100%',margin:0,padding:0}
@@ -78,8 +77,6 @@ const SkillDataviz = () => {
 
 
       </VictoryChart>
-      <Legend/>
-    </>
   )
 
 }

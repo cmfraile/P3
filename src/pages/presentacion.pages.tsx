@@ -1,5 +1,5 @@
 import '../styles/pages/presentacion.sass';
-import SkillDataviz from '../components/SkillDataviz.component';
+import SkillDataviz, { Legend } from '../components/SkillDataviz.component';
 import { presentacion } from '../misc/data';
 
 const RootPresentacion = () => {
@@ -13,6 +13,7 @@ const RootPresentacion = () => {
             <div className="skills" style={{transform:"rotate(90deg)"}}>
                 <SkillDataviz/>
             </div>
+            <Legend/>
         </div>
     )
 }

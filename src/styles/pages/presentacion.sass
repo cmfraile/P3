@@ -2,6 +2,7 @@
 
 $mw1:25%
 $mw2:50%
+$mw3:80%
     
 .root_presentacion
     display: flex
@@ -9,6 +10,7 @@ $mw2:50%
     align-items: center
     justify-items: center
     flex-wrap: wrap
+    position: relative
     .about,.skills
         margin: 0px 50px
     .about
@@ -30,19 +32,28 @@ $mw2:50%
         max-width: $mw2
         h5
             text-decoration: underline
+    .legendChart
+        position: absolute
+        bottom: 250px
+        right: 250px
+        p
+            padding: 0px
+            margin: 0px
+            font-size: 1.5rem
+            font-weight: 300
+        .experiencia
+            color: $accent1
+            border-color: $accent1
+        .practica
+            color: $accent2
+            border-color: $accent2
+
+@media screen and (max-width:1200px)
+    .root_presentacion
         .legendChart
-            position: fixed
-            right: 10%
-            top: 30%
-            transform: rotate(270deg)
-            p
-                padding: 0px
-                margin: 0px
-                font-size: 1.5rem
-                font-weight: 700
-            .experiencia
-                color: $accent1
-                border-color: $accent1
-            .practica
-                color: $accent2
-                border-color: $accent2
+            margin-top: 100px
+            position: static
+        .about
+            margin-bottom: 150px
+        .about,.skills
+            min-width: $mw3
