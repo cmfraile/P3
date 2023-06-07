@@ -2,6 +2,33 @@ import { experienciaProps } from "../components/cards/experiencia.card";
 import { formationProps } from "../components/cards/formacion.card";
 import { trabajoProps } from "../components/cards/trabajo.card";
 
+export interface dataForDataVizProps {img:string,practica:number,experiencia:number};
+const urlBase = 'src/assets/stackIcons'
+const skillsData:{[key:string]:dataForDataVizProps} = {
+  'angular':{img:`${urlBase}/angular.png`,practica:26,experiencia:3},
+  'bootstrap':{img:`${urlBase}/bootstrap.png`,practica:36,experiencia:12},
+  'css3':{img:`${urlBase}/css3.png`,practica:36,experiencia:12},
+  'django':{img:`${urlBase}/django.png`,practica:3,experiencia:0},
+  'docker':{img:`${urlBase}/docker.png`,practica:27,experiencia:12},
+  'express':{img:`${urlBase}/express.png`,practica:22,experiencia:12},
+  'html5':{img:`${urlBase}/html5.png`,practica:36,experiencia:12},
+  'mongodb':{img:`${urlBase}/mongodb.png`,practica:22,experiencia:12},
+  'nodejs':{img:`${urlBase}/nodejs.png`,practica:22,experiencia:12},
+  'php':{img:`${urlBase}/php.png`,practica:2,experiencia:0},
+  'mySQL':{img:`${urlBase}/mySQL.png`,practica:2,experiencia:0},
+  'python':{img:`${urlBase}/python.png`,practica:3,experiencia:0},
+  'react':{img:`${urlBase}/react.png`,practica:12,experiencia:9},
+  'reactiveX':{img:`${urlBase}/reactiveX.png`,practica:22,experiencia:3},
+  'redux':{img:`${urlBase}/redux.png`,practica:3,experiencia:3},
+  'socket.io':{img:`${urlBase}/socket.io.png`,practica:2,experiencia:0},
+  'typescript':{img:`${urlBase}/typescript.png`,practica:26,experiencia:12},
+  'sass':{img:`${urlBase}/sass.png`,practica:36,experiencia:12},
+}
+
+const presentacion:string =
+'Desarrollador y técnico que tras su experiencia de técnico helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue idoneo para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario. Este verano publico mi primera aplicación web y actualmente estoy buscando empleo por cuenta ajena, que implique compartir conocimientos y habilidades con otros miembros de proyecto, ya que es algo que actualmente no me brinda mi andadura como freelance, y no me quiero privar de ello.\nEn mi tiempo libre disfruto de la ciencia ficción y de cualquier juego que implique el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
+
+
 const formacion:formationProps[] = [
 
     {
@@ -126,7 +153,7 @@ const trabajos:trabajoProps[] = [
         foto:`src/assets/fototrabajos/cleanSolid.jpg`,
         nombre:'Clean code & SOLID',
         estado:'12 - 2022',
-        descripcion:'Apuntes acerca de lo aprendido de código limpio, patrones, antipatrones y SOLID . Sigue el repo si eres desarrollador, pues te ayudara en tus futuros proyectos, te lo garantizo.',
+        descripcion:'Apuntes acerca de lo aprendido de código limpio, patrones, antipatrones y SOLID . Sigue el repo si eres desarrollador, pues te ayudara en tus futuros proyectos.',
         repoURL:'https://github.com/cmfraile/SOLID-CleanCode',
         side:false,
         customIndex:3
@@ -211,4 +238,4 @@ const trabajos:trabajoProps[] = [
     },
   ];
 
-export { formacion , datosDeInteres , experiencia , trabajos }
+export { formacion , datosDeInteres , experiencia , trabajos , skillsData , presentacion }

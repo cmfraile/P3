@@ -1,34 +1,12 @@
-import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack , VictoryTheme, VictoryLegend } from 'victory';
-
-interface dataForDataVizProps {img:string,practica:number,experiencia:number};
-const urlBase = 'src/assets/stackIcons'
-const data:{[key:string]:dataForDataVizProps} = {
-  'angular':{img:`${urlBase}/angular.png`,practica:26,experiencia:3},
-  'bootstrap':{img:`${urlBase}/bootstrap.png`,practica:36,experiencia:12},
-  'css3':{img:`${urlBase}/css3.png`,practica:36,experiencia:12},
-  'django':{img:`${urlBase}/django.png`,practica:3,experiencia:0},
-  'docker':{img:`${urlBase}/docker.png`,practica:27,experiencia:12},
-  'express':{img:`${urlBase}/express.png`,practica:22,experiencia:12},
-  'html5':{img:`${urlBase}/html5.png`,practica:36,experiencia:12},
-  'mongodb':{img:`${urlBase}/mongodb.png`,practica:22,experiencia:12},
-  'nodejs':{img:`${urlBase}/nodejs.png`,practica:22,experiencia:12},
-  'php':{img:`${urlBase}/php.png`,practica:2,experiencia:0},
-  'mySQL':{img:`${urlBase}/mySQL.png`,practica:2,experiencia:0},
-  'python':{img:`${urlBase}/python.png`,practica:3,experiencia:0},
-  'react':{img:`${urlBase}/react.png`,practica:12,experiencia:9},
-  'reactiveX':{img:`${urlBase}/reactiveX.png`,practica:22,experiencia:3},
-  'redux':{img:`${urlBase}/redux.png`,practica:3,experiencia:3},
-  'socket.io':{img:`${urlBase}/socket.io.png`,practica:2,experiencia:0},
-  'typescript':{img:`${urlBase}/typescript.png`,practica:26,experiencia:12},
-  'sass':{img:`${urlBase}/sass.png`,practica:36,experiencia:12},
-}
+import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack , VictoryLegend , VictoryLabel } from 'victory';
+import { skillsData , dataForDataVizProps } from '../misc/data';
 
 const Legend = () => {
 
   return(
     <div className="legendChart">
-      <p className="practica">practica</p>
       <p className="experiencia">experiencia</p>
+      <p className="practica">practica</p>
     </div>
   )
 
@@ -39,59 +17,73 @@ const SkillDataviz = () => {
 
   const CustomTickLabel = (props:any) => {
     const { x,y,text } = props;
-    console.log({props})
     return (
-      <image x={x} y={y} 
-      href={data[text].img}
-      width={10} height={10}
-      style={{margin:'0px',padding:'0px'}}
+      <image x={x-7} y={y}
+      href={skillsData[text].img}
+      width={15}
       />
     );
   }
 
-  const parsed:dataForDataVizProps[] = Object.keys(data)
+  const parsed:dataForDataVizProps[] = Object.keys(skillsData)
   .sort( (a,b) => {
-    const accumulated = (index:string) => data[index].experiencia + data[index].practica ;
+    const accumulated = (index:string) => skillsData[index].experiencia + skillsData[index].practica ;
     if(accumulated(a) < accumulated(b)){return 1};
     if(accumulated(a) > accumulated(b)){return -1};
     return 0
   })
   .map( x => {
-    const { img , practica , experiencia } = data[x];
+    const { img , practica , experiencia } = skillsData[x];
     return {name:x,img,practica,experiencia,suma:practica+experiencia}
   })
 
   return(
     <>
       <VictoryChart
-        theme={VictoryTheme.material}
+        style={{
+          parent:{minWidth:'100%',margin:0,padding:0}
+        }}
       >
+
+        <VictoryLegend 
+          x={300} y={0}
+          orientation='vertical'
+          style={{
+            parent:{transform:'rotate(90deg)'},
+            labels:{fontFamily:'Montserrat'}
+          }}
+          data={[
+            { name: "Experiencia", symbol: { fill: '#E74C3C' , type:'square' } },
+            { name: "Practica", symbol: { fill: '#27AE60' , type:'square' } },
+          ]}
+        />
 
         <VictoryAxis
           dependentAxis
           label='años'
           style={{
-            tickLabels: {angle: 270, fontSize: 8},
-            axisLabel: {angle: 270, fontSize: 8}
+            tickLabels: {angle: 270, fontSize: 10 , fontFamily:'Montserrat',padding:15},
+            axisLabel: {angle: 270, fontSize: 15 , fontFamily:'Montserrat'},
           }}
           tickFormat={(x:number) => (Math.floor(x/12))}
         />
 
         <VictoryAxis
-          tickFormat={(t) => t}
-          style={{
-          }}
+          label='tecnologías'
           tickLabelComponent={<CustomTickLabel/>}
+          style={{
+            axis:{stroke:'none'},
+            axisLabel: {angle: 180,fontSize:15,fontFamily:'Montserrat',margin:'auto'},
+          }}
         />
 
         <VictoryStack>
-          <VictoryBar data={parsed} y='experiencia' x='name'/>
-          <VictoryBar data={parsed} y='practica' x='name'/>
+          <VictoryBar colorScale={['#E74C3C']} data={parsed} barRatio={0.75} y='experiencia' x='name'/>
+          <VictoryBar colorScale={['#27AE60']} data={parsed} barRatio={0.5} y='practica' x='name'/>
         </VictoryStack>
 
 
       </VictoryChart>
-      <Legend/>
     </>
   )
 

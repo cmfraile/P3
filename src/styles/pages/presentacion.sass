@@ -5,48 +5,44 @@ $mw2:50%
     
 .root_presentacion
     display: flex
-    flex-direction: row
     justify-content: center
     align-items: center
+    justify-items: center
     flex-wrap: wrap
     .about,.skills
         margin: 0px 50px
     .about
-        min-width: $mw1
         max-width: $mw1
+        min-width: $mw1
         p
             margin: 0px
             padding: 0px
             text-align: justify
             text-indent: 15%
             font-size: 1.15rem
+            font-weight: 500
+            line-height: 1.8
+            white-space: pre-line
     .skills
         display: flex
         justify-content: center
-        align-items: center
-        h5
-            text-decoration: underline
         min-width: $mw2
         max-width: $mw2
+        h5
+            text-decoration: underline
         .legendChart
-            display: flex
-            flex-direction: row
-            max-width: 200px
-            max-height: 200px
             transform: rotate(270deg)
-            margin: -150px
             p
                 margin: 0px
                 padding: 0px
                 font-weight: 700
                 font-size: 1.5rem
                 margin: 0px 30px
-                border: 1px solid
-                padding: 5px
+                padding: 10px
                 border-radius: 10px
-            .practica
+            .experiencia
                 color: $accent1
                 border-color: $accent1
-            .experiencia
+            .practica
                 color: $accent2
                 border-color: $accent2
