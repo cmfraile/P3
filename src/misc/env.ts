@@ -1,8 +1,7 @@
-const dopcase:'development'|'production' = 'development';
+//true : development - false : production
+const isProduction:boolean = false;
 
 const dopRoutes = () =>
-    (dopcase == 'development')
-    ? 'src/assets'
-    : 'https://cmfg.dev/'
+    (isProduction) ? 'src/assets' : 'https://cmfg.dev/'
 
 export default dopRoutes;
