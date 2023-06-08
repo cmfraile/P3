@@ -1,29 +1,37 @@
 import { experienciaProps } from "../components/cards/experiencia.card";
 import { formationProps } from "../components/cards/formacion.card";
 import { trabajoProps } from "../components/cards/trabajo.card";
+import dopRoutes from "./env";
 
-export interface dataForDataVizProps {img:string,practica:number,experiencia:number,mainStack:boolean};
-const urlBase = 'src/assets/stackIcons'
-const skillsData:{[key:string]:dataForDataVizProps} = {
-  'angular':{img:`${urlBase}/angular.png`,practica:26,experiencia:3,mainStack:true},
-  'bootstrap':{img:`${urlBase}/bootstrap.png`,practica:36,experiencia:12,mainStack:false},
-  'css3':{img:`${urlBase}/css3.png`,practica:36,experiencia:12,mainStack:false},
-  'django':{img:`${urlBase}/django.png`,practica:3,experiencia:0,mainStack:false},
-  'docker':{img:`${urlBase}/docker.png`,practica:27,experiencia:12,mainStack:true},
-  'express':{img:`${urlBase}/express.png`,practica:22,experiencia:12,mainStack:true},
-  'html5':{img:`${urlBase}/html5.png`,practica:36,experiencia:12,mainStack:false},
-  'mongodb':{img:`${urlBase}/mongodb.png`,practica:22,experiencia:12,mainStack:true},
-  'nodejs':{img:`${urlBase}/nodejs.png`,practica:22,experiencia:12,mainStack:true},
-  'php':{img:`${urlBase}/php.png`,practica:2,experiencia:0,mainStack:false},
-  'mySQL':{img:`${urlBase}/mySQL.png`,practica:2,experiencia:0,mainStack:false},
-  'python':{img:`${urlBase}/python.png`,practica:3,experiencia:0,mainStack:false},
-  'react':{img:`${urlBase}/react.png`,practica:12,experiencia:9,mainStack:true},
-  'reactiveX':{img:`${urlBase}/reactiveX.png`,practica:22,experiencia:3,mainStack:false},
-  'redux':{img:`${urlBase}/redux.png`,practica:3,experiencia:3,mainStack:true},
-  'socket.io':{img:`${urlBase}/socket.io.png`,practica:2,experiencia:0,mainStack:false},
-  'typescript':{img:`${urlBase}/typescript.png`,practica:26,experiencia:12,mainStack:true},
-  'sass':{img:`${urlBase}/sass.png`,practica:36,experiencia:12,mainStack:false},
+export interface dataForDataVizProps {img?:string,practica:number,experiencia:number,mainStack:boolean};
+
+const routerParser = (mid:string,name:string) =>
+  `${dopRoutes()}/${mid}/${name}`
+
+let skillsData:{[key:string]:dataForDataVizProps} = {
+  'angular':{practica:26,experiencia:3,mainStack:true},
+  'bootstrap':{practica:36,experiencia:12,mainStack:false},
+  'css3':{practica:36,experiencia:12,mainStack:false},
+  'django':{practica:3,experiencia:0,mainStack:false},
+  'docker':{practica:27,experiencia:12,mainStack:true},
+  'express':{practica:22,experiencia:12,mainStack:true},
+  'html5':{practica:36,experiencia:12,mainStack:false},
+  'mongodb':{practica:22,experiencia:12,mainStack:true},
+  'nodejs':{practica:22,experiencia:12,mainStack:true},
+  'php':{practica:2,experiencia:0,mainStack:false},
+  'mySQL':{practica:2,experiencia:0,mainStack:false},
+  'python':{practica:3,experiencia:0,mainStack:false},
+  'react':{practica:12,experiencia:9,mainStack:true},
+  'reactiveX':{practica:22,experiencia:3,mainStack:false},
+  'redux':{practica:3,experiencia:3,mainStack:true},
+  'socket.io':{practica:2,experiencia:0,mainStack:false},
+  'typescript':{practica:26,experiencia:12,mainStack:true},
+  'sass':{practica:36,experiencia:12,mainStack:false},
 }
+
+Object.keys(skillsData).map(x => {
+  skillsData[x].img = routerParser('stackIcons',`${x}.png`)
+});
 
 const presentacion:string =
 'Desarrollador y técnico que tras su experiencia de técnico helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue idóneo para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario. Este verano publico mi primera aplicación web y actualmente estoy buscando empleo por cuenta ajena, que implique compartir conocimientos y habilidades con otros miembros de proyecto, ya que es algo que actualmente no me brinda mi andadura como freelance, y no me quiero privar de ello.\nEn mi tiempo libre disfruto de la ciencia ficción y de cualquier juego que implique el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
@@ -132,7 +140,7 @@ const experiencia:experienciaProps[] = [
 
 const trabajos:trabajoProps[] = [
     {
-      foto:`src/assets/fototrabajos/drone.jpg`,
+      foto:routerParser('fototrabajos','drone.jpg'),
       nombre:'Dron de carreras',
       estado:'05 - 2019',
       descripcion:'Pequeño proyecto entre amigos que tomamos tras documentarme en internet sobre este hobby derivado del aeromodelismo. El resultado fue espectacular. Fue mi primera experiencia de holgado aprendizaje autodidacta a través de internet.',
@@ -141,7 +149,7 @@ const trabajos:trabajoProps[] = [
       customIndex:13
     },
     {
-      foto:`src/assets/fototrabajos/pf3.jpg`,
+      foto:routerParser('fototrabajos','pf3.jpg'),
       nombre:'Portfolio 3.0 [ β ]',
       estado:'06 - 2023',
       descripcion:'Portfolio realizado en una semana con el cual representar mejor mi trabajo. Un desarrollador hace cambios significativos en su trabajo cada 6 meses, con lo que un portfolio con mas de un año y medio dificilmente me logre representar en la actualidad. Aqui busco un diseño minimalista y claro, donde menos es mas. Lo lanzo a la par que la beta de mi siguiente aplicación, para mejorar mi empleabilidad.',
@@ -150,7 +158,7 @@ const trabajos:trabajoProps[] = [
       customIndex:9
     },
     {
-        foto:`src/assets/fototrabajos/cleanSolid.jpg`,
+        foto:routerParser('fototrabajos','cleanSolid.jpg'),
         nombre:'Clean code & SOLID',
         estado:'12 - 2022',
         descripcion:'Apuntes acerca de lo aprendido de código limpio, patrones, antipatrones y SOLID . Sigue el repo si eres desarrollador, pues te ayudara en tus futuros proyectos.',
@@ -159,7 +167,7 @@ const trabajos:trabajoProps[] = [
         customIndex:3
       },
     {
-        foto:`src/assets/fototrabajos/backend.jpg`,
+        foto:routerParser('fototrabajos','backend.jpg'),
         nombre:'Node backend shell',
         estado:'12 - 2022',
         descripcion:'En el desarrollo del BackEnd de la aplicación de un cliente, tras el reciente aprendizaje de patrones de diseño y buenas prácticas, estaba percatándome de que como me enseñaron API REST estaba bien para afianzar esos conocimientos, pero "dar cera, pulir cera" sirve a los estudiantes, no en un proyecto real que no admite la misma deuda técnica. Tomé la determinación de implantar una solución a ese problema donde dicha CRUD es generada dinámicamente, y me permite usar abstracciones hasta llegar a los casos de uso, pudiendo usar un caso para todas las colecciones de datos que se comportasen similar. Esta idea me permitió ahorrar muchísimas lineas de código y generar una solución para API REST con Node.js al problema descrito . Es el trabajo de BackEnd del que mas orgulloso me siento y espero que esta propuesta ayude a mas desarrolladores.',
@@ -168,7 +176,7 @@ const trabajos:trabajoProps[] = [
         customIndex:2
     },
     {
-      foto:`src/assets/fototrabajos/pf1.jpg`,
+      foto:routerParser('fototrabajos','pf1.jpg'),
       nombre:'Portfolio 1.0',
       estado:'03 - 2021',
       descripcion:'Fue mi primer portfolio realizado tras aprender Python, Django y refrescar HTML/CSS . Una experiencia muy didáctica e importante que me mostró la razón de porque las aplicaciones se dividen en varias partes y hacen uso de varias tecnologías. A partir de aqui empecé a definir mi stack y afinar mis habilidades con esta nueva orientación.',
@@ -177,7 +185,7 @@ const trabajos:trabajoProps[] = [
       customIndex:7
     },
     {
-      foto:`src/assets/fototrabajos/pf2.png`,
+      foto:routerParser('fototrabajos','pf2.png'),
       nombre:'Portfolio 2.0',
       estado:'03 - 2022',
       descripcion:'Proyecto con el cual busque consolidar mis conocimientos del MEAN stack tras aprender Node.js, API REST y MongoDB . En este proyecto aprendí las consecuencias de la deuda técnica , la cual se tradució a futuras e incansables incidencias.',
@@ -185,7 +193,7 @@ const trabajos:trabajoProps[] = [
       customIndex:8
     },
     {
-      foto:`src/assets/fototrabajos/n1.png`,
+      foto:routerParser('fototrabajos','n1.png'),
       nombre:'NUWE - Hackaton',
       estado:'06 - 2021',
       descripcion:'Hackaton organizada por NUWE con motivo de su inauguración. Fue mi primera experiencia en hackatones y pese a que no permitian usar Angular, pues el reto era de React, acepté el reto por llevarme la experiencia.',
@@ -194,7 +202,7 @@ const trabajos:trabajoProps[] = [
       customIndex:6,
     },
     {
-      foto:`src/assets/fototrabajos/bdt.jpg`,
+      foto:routerParser('fototrabajos','bdt.jpg'),
       nombre:'Barcelona Digital Talent - Hackaton',
       estado:'11 - 2021',
       descripcion:'Hackatón organizada por el BDT y bajo la plataforma de NUWE. En ella teniamos que hacer una pasarela de pago similar a la del ejercicio. Completarlo y ademas añadirle unos cuantos detalles vistosos me hizo quedar primero de entre 40 participantes. Una gran experiencia con la curiosidad de "ganar" la hackatón.',
@@ -204,7 +212,7 @@ const trabajos:trabajoProps[] = [
       customIndex:5
     },
     {
-      foto:`src/assets/fototrabajos/pgw.jpg`,
+      foto:routerParser('fototrabajos','pgw.jpg'),
       nombre:'Party game web',
       estado:'En desarrollo',
       descripcion:'Pequeño proyecto para afianzar Redux el cual puedo publicar una beta para Agosto, para el uso y disfrute de ustedes. Con el he aprendido a usar esta tecnologia. Mi intención es presentarme con esta app para mejorar mi empleabilidad, mostrar mis capacidades, y monetizarlo en última instancia.',
@@ -212,7 +220,7 @@ const trabajos:trabajoProps[] = [
       customIndex:1
     },
     {
-      foto:`src/assets/fototrabajos/bg.png`,
+      foto:routerParser('fototrabajos','bg.png'),
       nombre:'Battle Gamers GAMING BAR',
       estado:'04 - 2023',
       descripcion:'Proyecto con el cual he aprendido la mayor parte de los fundamentos BackEnd. En otro repositorio muestro un cascarón del BackEnd que aqui realicé, con abstracciones y sugerencias para resolver el problema que aqui tuve.',
@@ -220,7 +228,7 @@ const trabajos:trabajoProps[] = [
       customIndex:10
     },
     {
-      foto:`src/assets/fototrabajos/ma.jpg`,
+      foto:routerParser('fototrabajos','ma.jpg'),
       nombre:'MahApps',
       estado:'Aparcada',
       descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, pero sobretodo todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en tu stack, apréndelo, y vuelve a la app cuando tengas lo que necesites. En un futuro puedo hacer esta app mucho mejor.',
@@ -229,7 +237,7 @@ const trabajos:trabajoProps[] = [
       customIndex:12
     },
     {
-      foto:`src/assets/fototrabajos/bico.jpg`,
+      foto:routerParser('fototrabajos','bico.jpg'),
       nombre:'Bico arts',
       estado:'En desarrollo',
       descripcion:'Encargo freelance de una web portfolio para un artista, donde se refleje su trabajo, sus tarifas, formulario de contacto y redes sociales. Tendrá panel de administración con autenticación para gestionar el contenido de la web. Una web vistosa, llamativa y decorada con sus motivos que trate de ser una obra de arte en si misma tal y como desea el cliente.',

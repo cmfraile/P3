@@ -1,7 +1,7 @@
 import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack } from 'victory';
 import { skillsData , dataForDataVizProps } from '../misc/data';
 
-interface dataInView {name:string,img:string,practica:number,experiencia:number,suma:number}
+interface dataInView {name:string,img?:string,practica:number,experiencia:number,suma:number}
 
 export const Legend = () => {
 
@@ -55,6 +55,7 @@ const SkillDataviz = () => {
           dependentAxis
           label='años'
           style={{
+            axis:{stroke:'none'},
             tickLabels: {angle: 270, fontSize: 10 , fontFamily:'Montserrat',padding:15},
             axisLabel: {angle: 270, fontSize: 15 , fontFamily:'Montserrat'},
           }}
