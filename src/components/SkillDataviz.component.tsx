@@ -39,6 +39,7 @@ const SkillDataviz = () => {
 
   return(
       <VictoryChart
+        height={400}
         style={{
           parent:{minWidth:'100%',margin:0,padding:0}
         }}
