@@ -1,6 +1,8 @@
 import { VictoryBar , VictoryChart , VictoryAxis , VictoryStack } from 'victory';
 import { skillsData , dataForDataVizProps } from '../misc/data';
 
+interface dataInView {name:string,img:string,practica:number,experiencia:number,suma:number}
+
 export const Legend = () => {
 
   return(
@@ -25,15 +27,19 @@ const SkillDataviz = () => {
     );
   }
 
-  const parsed:dataForDataVizProps[] = Object.keys(skillsData)
+  const parsed:dataInView[] = Object.keys(skillsData)
   .sort( (a,b) => {
     const accumulated = (index:string) => skillsData[index].experiencia + skillsData[index].practica ;
     if(accumulated(a) < accumulated(b)){return 1};
     if(accumulated(a) > accumulated(b)){return -1};
     return 0
   })
+  .sort((a,b) => {
+    //return Number(skillsData[b].mainStack) - Number(skillsData[a].mainStack);
+    return 0
+  })
   .map( x => {
-    const { img , practica , experiencia } = skillsData[x];
+    const { img , practica , experiencia , mainStack } = skillsData[x];
     return {name:x,img,practica,experiencia,suma:practica+experiencia}
   })
 
