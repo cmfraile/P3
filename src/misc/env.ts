@@ -1,7 +1,7 @@
 //true : development - false : production
-const isProduction:boolean = false;
+const isDevelopment:boolean = false;
 
 const dopRoutes = () =>
-    (isProduction) ? 'src/assets' : 'https://cmfg.dev/'
+    (isDevelopment) ? 'src/assets' : 'https://cmfg.dev/assets'
 
 export default dopRoutes;
