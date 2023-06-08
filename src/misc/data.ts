@@ -26,7 +26,7 @@ const skillsData:{[key:string]:dataForDataVizProps} = {
 }
 
 const presentacion:string =
-'Desarrollador y técnico que tras su experiencia de técnico helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue idoneo para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario. Este verano publico mi primera aplicación web y actualmente estoy buscando empleo por cuenta ajena, que implique compartir conocimientos y habilidades con otros miembros de proyecto, ya que es algo que actualmente no me brinda mi andadura como freelance, y no me quiero privar de ello.\nEn mi tiempo libre disfruto de la ciencia ficción y de cualquier juego que implique el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
+'Desarrollador y técnico que tras su experiencia de técnico helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue idóneo para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario. Este verano publico mi primera aplicación web y actualmente estoy buscando empleo por cuenta ajena, que implique compartir conocimientos y habilidades con otros miembros de proyecto, ya que es algo que actualmente no me brinda mi andadura como freelance, y no me quiero privar de ello.\nEn mi tiempo libre disfruto de la ciencia ficción y de cualquier juego que implique el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
 
 
 const formacion:formationProps[] = [
@@ -69,7 +69,7 @@ const formacion:formationProps[] = [
 ];
 
 const datosDeInteres:string[] = [
-    'Inglés A1 oral , B1 leido/escrito. No certificado.','Especial interés en teletrabajar.','Carnet manipulador de alimentos.',
+    'Inglés A2 oral , B1 leido/escrito. No certificado.','Especial interés en teletrabajar.','Carnet manipulador de alimentos.',
 ].sort();
 
 const experiencia:experienciaProps[] = [
@@ -180,7 +180,7 @@ const trabajos:trabajoProps[] = [
       foto:`src/assets/fototrabajos/pf2.png`,
       nombre:'Portfolio 2.0',
       estado:'03 - 2022',
-      descripcion:'Proyecto con el cual busque consolidar mis conocimientos del MEAN stack tras aprender Node.js, API REST y MongoDB . Es el Portfolio que estas viendo actualmente y el cual esta pasando por mantenimiento de cara a convertirlo en MERN y afianzar mis conocimientos de React.',
+      descripcion:'Proyecto con el cual busque consolidar mis conocimientos del MEAN stack tras aprender Node.js, API REST y MongoDB . En este proyecto aprendí las consecuencias de la deuda técnica , la cual se tradució a futuras e incansables incidencias.',
       side:true,
       customIndex:8
     },
@@ -223,7 +223,7 @@ const trabajos:trabajoProps[] = [
       foto:`src/assets/fototrabajos/ma.jpg`,
       nombre:'MahApps',
       estado:'Aparcada',
-      descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, pero sobretodo todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en tu stack, apréndelo, y vuelve a la App cuando tengas lo que necesites. En un futuro puedo hacer esta app mucho mejor.',
+      descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, pero sobretodo todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en tu stack, apréndelo, y vuelve a la app cuando tengas lo que necesites. En un futuro puedo hacer esta app mucho mejor.',
       repoURL:'https://github.com/cmfraile/MahApps',
       side:true,
       customIndex:12
