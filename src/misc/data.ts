@@ -225,7 +225,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','pgw.jpg'),
       nombre:'Party game',
       estado:'En desarrollo',
-      descripcion:'Pequeño proyecto para afianzar Redux en el cual estoy ocupado para afinar mis habilidades. Tras concluir dicha aplicación en React, tome la apuesta de aprender React Native y llevarlo a una plataforma movil, donde sin duda es su sitio. Actualmente la estoy porteando.',
+      descripcion:'Pequeño proyecto para afianzar Redux en el cual estoy ocupado para afinar mis habilidades. Tras concluir dicha aplicación en React, decidí aprender React Native y llevarlo a una plataforma movil, donde sin duda es su sitio. Actualmente la estoy porteando.',
       side:false,
       customIndex:1
     },
