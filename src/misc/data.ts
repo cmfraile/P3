@@ -34,13 +34,13 @@ Object.keys(skillsData).map(x => {
 });
 
 const presentacion:string =
-'Desarrollador y técnico que tras su experiencia de técnico helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue idóneo para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario. Este verano publico mi primera aplicación web y actualmente estoy buscando empleo por cuenta ajena, que implique compartir conocimientos y habilidades con otros miembros de proyecto, ya que es algo que actualmente no me brinda mi andadura como freelance, y no me quiero privar de ello.\nEn mi tiempo libre disfruto de la ciencia ficción y de cualquier juego que implique el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
+'Desarrollador y técnico que tras su experiencia de técnico helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue idóneo para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario. Actualmente estoy con desarrollos personales para móvil, prepararme el C1 de inglés y buscar empleo por cuenta ajena. Mi andadura como freelance me ha privado de compartir conocimientos y habilidades con otros miembros de un mismo proyecto, y es algo frustrante que deseo cambiar.\nEn mi tiempo libre disfruto de la ciencia ficción y de cualquier juego que implique el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
 
 
 const formacion:formationProps[] = [
 
     {
-        materia:'Desarrollo web Frontend (HTML, CSS, Bootstrap, JavaScript, Angular, React, Redux y RxJS), Node (API REST y WebSockets), Docker, Python, Django, PHP y MySQL.',
+        materia:'Desarrollo web Frontend (HTML, CSS, Bootstrap, JavaScript, Angular, React/React Native/Next.js, Redux y RxJS), Node (API REST y WebSockets), Docker, Python, Django, PHP y MySQL.',
         periodo:'2020 - actualidad',
         entidad:'UDEMY',
         side:false
@@ -77,7 +77,7 @@ const formacion:formationProps[] = [
 ];
 
 const datosDeInteres:string[] = [
-    'Inglés A2 oral , B1 leido/escrito. No certificado.','Especial interés en teletrabajar.','Carnet manipulador de alimentos.',
+    'Inglés A2 oral , B1 leido/escrito. Actualmente estudiando .','Especial interés en teletrabajar.','Carnet manipulador de alimentos.',
 ].sort();
 
 const experiencia:experienciaProps[] = [
@@ -152,7 +152,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','pf3.jpg'),
       nombre:'Portfolio 3.0 [ β ]',
       estado:'06 - 2023',
-      descripcion:'Portfolio realizado en una semana con el cual representar mejor mi trabajo. Un desarrollador hace cambios significativos en su trabajo cada 6 meses, con lo que un portfolio con mas de un año y medio dificilmente me logre representar en la actualidad. Aqui busco un diseño minimalista y claro, donde menos es mas. Lo lanzo a la par que la beta de mi siguiente aplicación, para mejorar mi empleabilidad.',
+      descripcion:'Portfolio realizado en una semana con el cual representar mejor mi trabajo. Un desarrollador hace cambios significativos en su trabajo cada 6 meses, con lo que un portfolio con mas de un año y medio dificilmente me logre representar en la actualidad. Aqui busco un diseño minimalista y claro, donde menos es mas.',
       repoURL:'https://github.com/cmfraile/P3',
       side:true,
       customIndex:9
@@ -215,7 +215,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','pgw.jpg'),
       nombre:'Party game web',
       estado:'En desarrollo',
-      descripcion:'Pequeño proyecto para afianzar Redux el cual puedo publicar una beta para Agosto, para el uso y disfrute de ustedes. Con el he aprendido a usar esta tecnologia. Mi intención es presentarme con esta app para mejorar mi empleabilidad, mostrar mis capacidades, y monetizarlo en última instancia.',
+      descripcion:'Pequeño proyecto para afianzar Redux en el cual estoy ocupado para afinar mis habilidades. Tras concluir dicha aplicación en React, tome la apuesta de aprender React Native y llevarlo a una plataforma movil, donde sin duda es su sitio. Actualmente la estoy porteando.',
       side:false,
       customIndex:1
     },
@@ -231,7 +231,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','ma.jpg'),
       nombre:'MahApps',
       estado:'Aparcada',
-      descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, pero sobretodo todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en tu stack, apréndelo, y vuelve a la app cuando tengas lo que necesites. En un futuro puedo hacer esta app mucho mejor.',
+      descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, pero sobretodo todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en tu stack, apréndelo, y vuelve a la app cuando tengas lo que necesites. Valorando seriamente pasarla a React Native y monetizarla, ya que la tengo documentada y me resulta facil de ejecutar.',
       repoURL:'https://github.com/cmfraile/MahApps',
       side:true,
       customIndex:12
@@ -240,7 +240,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','bico.jpg'),
       nombre:'Bico arts',
       estado:'En desarrollo',
-      descripcion:'Encargo freelance de una web portfolio para un artista, donde se refleje su trabajo, sus tarifas, formulario de contacto y redes sociales. Tendrá panel de administración con autenticación para gestionar el contenido de la web. Una web vistosa, llamativa y decorada con sus motivos que trate de ser una obra de arte en si misma tal y como desea el cliente.',
+      descripcion:'Encargo freelance de una web portfolio para un artista, donde se refleje su trabajo, sus tarifas, formulario de contacto y redes sociales. Tendrá panel de administración con autenticación para gestionar el contenido de la web. Una web vistosa, llamativa y decorada con sus motivos que trate de ser una obra de arte en si misma tal y como desea el cliente. Ha sido el proyecto con el que he aprendido todo lo que se de React y con el que se me ha permitido explorar esta libreria.',
       side:true,
       customIndex:11
     },
