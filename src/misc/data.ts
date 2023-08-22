@@ -176,6 +176,16 @@ const trabajos:trabajoProps[] = [
         customIndex:2
     },
     {
+      foto:routerParser('fototrabajos','pt1.jpg'),
+      nombre:'Prueba técnica de libreria',
+      estado:'07 - 2022',
+      descripcion:'Pueba técnica en la cual teníamos que simular el buscador de una librería, que filtrase por numero de páginas, género y permitiera hacer un carrito con libros. Fue mi primera experiencia con Next.js, framework el cual aprendí previo a ejecutar la prueba.',
+      repoURL:'https://github.com/cmfraile/pruebasTecnicasMIDU/tree/pruebaT%C3%A9cnica/pruebas/01-reading-list/cmfraile',
+      despliegueURL:'https://01-reading-list-deploy-83ah247eo-cmfraile.vercel.app/',
+      side:true,
+      customIndex:4
+    },
+    {
       foto:routerParser('fototrabajos','pf1.jpg'),
       nombre:'Portfolio 1.0',
       estado:'03 - 2021',
@@ -213,7 +223,7 @@ const trabajos:trabajoProps[] = [
     },
     {
       foto:routerParser('fototrabajos','pgw.jpg'),
-      nombre:'Party game web',
+      nombre:'Party game',
       estado:'En desarrollo',
       descripcion:'Pequeño proyecto para afianzar Redux en el cual estoy ocupado para afinar mis habilidades. Tras concluir dicha aplicación en React, tome la apuesta de aprender React Native y llevarlo a una plataforma movil, donde sin duda es su sitio. Actualmente la estoy porteando.',
       side:false,
@@ -230,7 +240,7 @@ const trabajos:trabajoProps[] = [
     {
       foto:routerParser('fototrabajos','ma.jpg'),
       nombre:'MahApps',
-      estado:'Aparcada',
+      estado:'',
       descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, pero sobretodo todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en tu stack, apréndelo, y vuelve a la app cuando tengas lo que necesites. Valorando seriamente pasarla a React Native y monetizarla, ya que la tengo documentada y me resulta facil de ejecutar.',
       repoURL:'https://github.com/cmfraile/MahApps',
       side:true,
