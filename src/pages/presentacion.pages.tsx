@@ -14,7 +14,6 @@ const RootPresentacion = () => {
                     <h5>Mis redes:</h5>
                     <LinkIcon svgCase='github' url='https://github.com/cmfraile'/>
                     <LinkIcon svgCase='linkedIn' url='https://www.linkedin.com/in/cmfraile/'/>
-                    <LinkIcon svgCase='instagram' url='https://www.instagram.com/cmfraile/'/>
                 </div>
             </div>
             <div className="skills" style={{transform:"rotate(90deg)"}}>

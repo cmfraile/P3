@@ -77,7 +77,7 @@ const formacion:formationProps[] = [
 ];
 
 const datosDeInteres:string[] = [
-    'Inglés A2 oral , B1 leido/escrito. Actualmente estudiando .','Especial interés en teletrabajar.','Carnet manipulador de alimentos.',
+    'Preparándome el C1 de inglés','Especial interés en teletrabajar.','Carnet manipulador de alimentos.',
 ].sort();
 
 const experiencia:experienciaProps[] = [
