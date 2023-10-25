@@ -10,24 +10,30 @@ const routerParser = (mid:string,name:string) =>
 
 let skillsData:{[key:string]:dataForDataVizProps} = {
   'angular':{practica:26,experiencia:3,mainStack:true},
-  'bootstrap':{practica:36,experiencia:12,mainStack:false},
-  'css3':{practica:36,experiencia:12,mainStack:false},
+  'bootstrap':{practica:36,experiencia:16,mainStack:false},
+  'css3':{practica:36,experiencia:16,mainStack:false},
   'django':{practica:3,experiencia:0,mainStack:false},
-  'docker':{practica:27,experiencia:12,mainStack:true},
-  'express':{practica:22,experiencia:12,mainStack:true},
-  'html5':{practica:36,experiencia:12,mainStack:false},
-  'mongodb':{practica:22,experiencia:12,mainStack:true},
-  'nodejs':{practica:22,experiencia:12,mainStack:true},
+  'docker':{practica:27,experiencia:16,mainStack:true},
+  'express':{practica:22,experiencia:16,mainStack:true},
+  'html5':{practica:36,experiencia:16,mainStack:false},
+  'mongodb':{practica:22,experiencia:16,mainStack:true},
+  'nodejs':{practica:22,experiencia:16,mainStack:true},
   'php':{practica:2,experiencia:0,mainStack:false},
   'mySQL':{practica:2,experiencia:0,mainStack:false},
   'python':{practica:3,experiencia:0,mainStack:false},
-  'react':{practica:12,experiencia:9,mainStack:true},
+  'react':{practica:12,experiencia:13,mainStack:true},
   'reactiveX':{practica:22,experiencia:3,mainStack:false},
-  'redux':{practica:3,experiencia:3,mainStack:true},
+  'redux':{practica:3,experiencia:7,mainStack:true},
   'socket.io':{practica:2,experiencia:0,mainStack:false},
-  'typescript':{practica:26,experiencia:12,mainStack:true},
-  'sass':{practica:36,experiencia:12,mainStack:false},
+  'typescript':{practica:26,experiencia:16,mainStack:true},
+  'sass':{practica:36,experiencia:16,mainStack:false},
 }
+
+Object.keys(skillsData).map(x => {
+  const { practica , experiencia } = skillsData[x] ;
+  skillsData[x].practica = 
+    (experiencia >= practica) ? practica : practica - experiencia
+})
 
 Object.keys(skillsData).map(x => {
   skillsData[x].img = routerParser('stackIcons',`${x}.png`)

@@ -59,7 +59,7 @@ const SkillDataviz = () => {
             tickLabels: {angle: 270, fontSize: 10 , fontFamily:'Montserrat',padding:15},
             axisLabel: {angle: 270, fontSize: 15 , fontFamily:'Montserrat'},
           }}
-          tickFormat={(x:number) => (Math.floor(x/12))}
+          tickFormat={(x:number) => (Math.floor(x/12)+1)}
         />
 
         <VictoryAxis
