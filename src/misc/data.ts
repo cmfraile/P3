@@ -156,12 +156,12 @@ const trabajos:trabajoProps[] = [
     },
     {
       foto:routerParser('fototrabajos','pf3.jpg'),
-      nombre:'Portfolio 3.0 [ β ]',
+      nombre:'Portfolio 3.0',
       estado:'06 - 2023',
       descripcion:'Portfolio realizado en una semana con el cual representar mejor mi trabajo. Un desarrollador hace cambios significativos en su trabajo cada 6 meses, con lo que un portfolio con mas de un año y medio dificilmente me logre representar en la actualidad. Aqui busco un diseño minimalista y claro, donde menos es mas.',
       repoURL:'https://github.com/cmfraile/P3',
-      side:true,
-      customIndex:9
+      side:false,
+      customIndex:2
     },
     {
         foto:routerParser('fototrabajos','cleanSolid.jpg'),
@@ -170,7 +170,7 @@ const trabajos:trabajoProps[] = [
         descripcion:'Apuntes acerca de lo aprendido de código limpio, patrones, antipatrones y SOLID . Sigue el repo si eres desarrollador, pues te ayudara en tus futuros proyectos.',
         repoURL:'https://github.com/cmfraile/SOLID-CleanCode',
         side:false,
-        customIndex:3
+        customIndex:4
       },
     {
         foto:routerParser('fototrabajos','backend.jpg'),
@@ -179,7 +179,7 @@ const trabajos:trabajoProps[] = [
         descripcion:'En el desarrollo del BackEnd de la aplicación de un cliente, tras el reciente aprendizaje de patrones de diseño y buenas prácticas, estaba percatándome de que como me enseñaron API REST estaba bien para afianzar esos conocimientos, pero "dar cera, pulir cera" sirve a los estudiantes, no en un proyecto real que no admite la misma deuda técnica. Tomé la determinación de implantar una solución a ese problema donde dicha CRUD es generada dinámicamente, y me permite usar abstracciones hasta llegar a los casos de uso, pudiendo usar un caso para todas las colecciones de datos que se comportasen similar. Esta idea me permitió ahorrar muchísimas lineas de código y generar una solución para API REST con Node.js al problema descrito . Es el trabajo de BackEnd del que mas orgulloso me siento y espero que esta propuesta ayude a mas desarrolladores.',
         repoURL:'https://github.com/cmfraile/MyNodeBackendShell',
         side:false,
-        customIndex:2
+        customIndex:3
     },
     {
       foto:routerParser('fototrabajos','pt1.jpg'),
@@ -188,8 +188,8 @@ const trabajos:trabajoProps[] = [
       descripcion:'Pueba técnica en la cual teníamos que simular el buscador de una librería, que filtrase por numero de páginas, género y permitiera hacer un carrito con libros. Fue mi primera experiencia con Next.js, framework el cual aprendí previo a ejecutar la prueba.',
       repoURL:'https://github.com/cmfraile/pruebasTecnicasMIDU/tree/pruebaT%C3%A9cnica/pruebas/01-reading-list/cmfraile',
       despliegueURL:'https://01-reading-list-deploy-83ah247eo-cmfraile.vercel.app/',
-      side:true,
-      customIndex:4
+      side:false,
+      customIndex:5
     },
     {
       foto:routerParser('fototrabajos','pf1.jpg'),
@@ -214,7 +214,7 @@ const trabajos:trabajoProps[] = [
       estado:'06 - 2021',
       descripcion:'Hackaton organizada por NUWE con motivo de su inauguración. Fue mi primera experiencia en hackatones y pese a que no permitian usar Angular, pues el reto era de React, acepté el reto por llevarme la experiencia.',
       despliegueURL:'https://github.com/cmfraile/HackatonNuwe2021FrontCMFG',
-      side:true,
+      side:false,
       customIndex:6,
     },
     {
@@ -224,7 +224,7 @@ const trabajos:trabajoProps[] = [
       descripcion:'Hackatón organizada por el BDT y bajo la plataforma de NUWE. En ella teniamos que hacer una pasarela de pago similar a la del ejercicio. Completarlo y ademas añadirle unos cuantos detalles vistosos me hizo quedar primero de entre 40 participantes. Una gran experiencia con la curiosidad de "ganar" la hackatón.',
       despliegueURL:'https://cmfraile.github.io/Hackaton---Jump2Digital---BCN---Carlos-Fraile/',
       repoURL:'https://github.com/cmfraile/Hackaton---Jump2Digital---BCN---Carlos-Fraile',
-      side:true,
+      side:false,
       customIndex:5
     },
     {
@@ -232,8 +232,8 @@ const trabajos:trabajoProps[] = [
       nombre:'Party game',
       estado:'En desarrollo',
       descripcion:'Pequeño proyecto para afianzar Redux en el cual estoy ocupado para afinar mis habilidades. Tras concluir dicha aplicación en React, decidí aprender React Native y llevarlo a una plataforma movil, donde sin duda es su sitio. Actualmente la estoy porteando.',
-      side:false,
-      customIndex:1
+      side:true,
+      customIndex:10
     },
     {
       foto:routerParser('fototrabajos','bg.png'),
@@ -254,11 +254,13 @@ const trabajos:trabajoProps[] = [
     },
     {
       foto:routerParser('fototrabajos','bico.jpg'),
-      nombre:'Bico arts',
-      estado:'En desarrollo',
-      descripcion:'Encargo freelance de una web portfolio para un artista, donde se refleje su trabajo, sus tarifas, formulario de contacto y redes sociales. Tendrá panel de administración con autenticación para gestionar el contenido de la web. Una web vistosa, llamativa y decorada con sus motivos que trate de ser una obra de arte en si misma tal y como desea el cliente. Ha sido el proyecto con el que he aprendido todo lo que se de React y con el que se me ha permitido explorar esta libreria.',
+      nombre:'BcoWorks',
+      estado:'',
+      despliegueURL:'https://www.bcoworks.es',
+      repoURL:'https://github.com/cmfraile/PortfolioBcoWorks',
+      descripcion:'Encargo freelance de una web portfolio para un artista, donde se refleje su trabajo, sus tarifas, formulario de contacto y redes sociales. Posee su panel de administración con autenticación mediante Google para que el dueño pueda gestionar la web incluso cambiar el estilo de la misma. Una web vistosa, llamativa y decorada con sus motivos que trate de ser una obra de arte en si misma tal y como desea el cliente. Ha sido el proyecto con el que he aprendido todo lo que se de React y con el he aprendido esta libreria.',
       side:true,
-      customIndex:11
+      customIndex:1
     },
   ];
 
