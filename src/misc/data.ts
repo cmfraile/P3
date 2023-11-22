@@ -256,7 +256,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','bico.jpg'),
       nombre:'BcoWorks',
       estado:'',
-      despliegueURL:'https://www.bcoworks.es',
+      despliegueURL:'https://bcoworks.es',
       repoURL:'https://github.com/cmfraile/PortfolioBcoWorks',
       descripcion:'Encargo freelance de una web portfolio para un artista, donde se refleje su trabajo, sus tarifas, formulario de contacto y redes sociales. Posee su panel de administración con autenticación mediante Google para que el dueño pueda gestionar la web incluso cambiar el estilo de la misma. Una web vistosa, llamativa y decorada con sus motivos que trate de ser una obra de arte en si misma tal y como desea el cliente. Ha sido el proyecto con el que he aprendido todo lo que se de React y con el he aprendido esta libreria.',
       side:true,
