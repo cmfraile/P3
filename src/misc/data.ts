@@ -92,7 +92,7 @@ const experiencia:experienciaProps[] = [
         inicio:2022,
         periodo:'10 meses',
         lugar:'Battle Gamers GAMING BAR.',
-        descripcion:'Desarrollo web, mayormente backend',
+        descripcion:'Desarrollo web, mayormente backend.',
         side:false,
         customIndex:2
       },
@@ -104,6 +104,15 @@ const experiencia:experienciaProps[] = [
         descripcion:'Desarrollo web freelance. Particulares, empresas y apps propias.',
         side:false,
         customIndex:1
+      },
+      {
+        puesto:'Técnico en microinformática',
+        inicio:2019,
+        periodo:'5 meses',
+        lugar:'Ayuntamiento de Córdoba',
+        descripcion:'Asistencia telefónica al usuario. Recepción, documentación y distribución departamental de incidencias con herramientas de ticketing. Helpdesk de primer nivel.',
+        side:false,
+        customIndex:3
       },
       {
         puesto:'Técnico superior de informática en prácticas',
