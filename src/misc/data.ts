@@ -40,7 +40,7 @@ Object.keys(skillsData).map(x => {
 });
 
 const presentacion:string =
-'Desarrollador y técnico que tras su experiencia de técnico helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue idóneo para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario. Actualmente estoy con desarrollos personales para móvil, prepararme el C1 de inglés y buscar empleo por cuenta ajena. Mi andadura como freelance me ha privado de compartir conocimientos y habilidades con otros miembros de un mismo proyecto, y es algo frustrante que deseo cambiar.\nEn mi tiempo libre disfruto de la ciencia ficción y de cualquier juego que implique el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
+'Desarrollador web y técnico informático que tras su experiencia en helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue una época ideal para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario : Aprendiendo nuevas tecnologías, rodando en ellas mas allá de su estricto estudio, con pequeños encargos e ideas, buscando comprender y atender de manera constante las necesidades del sector de cara a trabajar en un equipo.\nMi objetivo es ser parte de un proyecto, donde pueda recibir conocimiento y experiencia de otros miembros para aplicarlo en nuestro software. Trabajar solo no demora mucho mas la resolución de problemas, pero hackatones y otros eventos del gremio me aportan unas dinámicas de trabajo que deseo de diario en mi carrera por lo que me hacen crecer.\nEn mi tiempo libre disfruto de la reuniones entre amigos , el ejercicio y de los juegos que impliquen el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
 
 
 const formacion:formationProps[] = [
@@ -87,21 +87,12 @@ const datosDeInteres:string[] = [
 ].sort();
 
 const experiencia:experienciaProps[] = [
-    {
-        puesto:'Desarrollador web multistack.',
-        inicio:2022,
-        periodo:'10 meses',
-        lugar:'Battle Gamers GAMING BAR.',
-        descripcion:'Desarrollo web, mayormente backend.',
-        side:false,
-        customIndex:2
-      },
       {
-        puesto:'Desarrollo web freelance.',
+        puesto:'Desarrollo software por libre',
         inicio:2022,
         periodo:'desde Septiembre',
-        lugar:'Autónomo',
-        descripcion:'Desarrollo web freelance. Particulares, empresas y apps propias.',
+        lugar:'',
+        descripcion:'Proyectos personales, pequeños encargos y software mas allá de aprender una tecnología, aplicándola sobre ideas concretas.',
         side:false,
         customIndex:1
       },
@@ -167,7 +158,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','pf3.jpg'),
       nombre:'Portfolio 3.0',
       estado:'06 - 2023',
-      descripcion:'Portfolio realizado en una semana con el cual representar mejor mi trabajo. Un desarrollador hace cambios significativos en su trabajo cada 6 meses, con lo que un portfolio con mas de un año y medio dificilmente me logre representar en la actualidad. Aqui busco un diseño minimalista y claro, donde menos es mas.',
+      descripcion:'Portfolio realizado en una semana que lograse representarme mejor en la actualidad . Aquí busco un diseño claro y minimalista, donde menos sea mas. Es el trabajo que estas viendo ahora mismo.',
       repoURL:'https://github.com/cmfraile/P3',
       side:false,
       customIndex:2
@@ -176,7 +167,7 @@ const trabajos:trabajoProps[] = [
         foto:routerParser('fototrabajos','cleanSolid.jpg'),
         nombre:'Clean code & SOLID',
         estado:'12 - 2022',
-        descripcion:'Apuntes acerca de lo aprendido de código limpio, patrones, antipatrones y SOLID . Sigue el repo si eres desarrollador, pues te ayudara en tus futuros proyectos.',
+        descripcion:'Mis apuntes en MarkDown acerca de lo aprendido en un curso de Clean code, patrones, antipatrones ( STUPID ) y SOLID. Siempre los tengo impresos y sobre mi mesa de trabajo , pues me siguen ayudando muchísimo. Tienes el repositorio justo abajo. Todo tuyo. Espero que te sea de ayuda.',
         repoURL:'https://github.com/cmfraile/SOLID-CleanCode',
         side:false,
         customIndex:4
@@ -185,7 +176,7 @@ const trabajos:trabajoProps[] = [
         foto:routerParser('fototrabajos','backend.jpg'),
         nombre:'Node backend shell',
         estado:'12 - 2022',
-        descripcion:'En el desarrollo del BackEnd de la aplicación de un cliente, tras el reciente aprendizaje de patrones de diseño y buenas prácticas, estaba percatándome de que como me enseñaron API REST estaba bien para afianzar esos conocimientos, pero "dar cera, pulir cera" sirve a los estudiantes, no en un proyecto real que no admite la misma deuda técnica. Tomé la determinación de implantar una solución a ese problema donde dicha CRUD es generada dinámicamente, y me permite usar abstracciones hasta llegar a los casos de uso, pudiendo usar un caso para todas las colecciones de datos que se comportasen similar. Esta idea me permitió ahorrar muchísimas lineas de código y generar una solución para API REST con Node.js al problema descrito . Es el trabajo de BackEnd del que mas orgulloso me siento y espero que esta propuesta ayude a mas desarrolladores.',
+        descripcion:'Cascarón de Back-end enfocado a API REST, realizado posterior al holgado aprendizaje de patrones de diseño básicos y buenas prácticas, aparte de explotar aun más Node.JS con el empleo de abstracciones, clases y explotando el lenguaje. Aprendí API REST a través de funciones, y eso esta bien para ver de una forma diáfana el funcionamiento y los fundamentos, pero implicaba repetir mucho código y la misma tarea para cada controlador y/o colección de datos . Tome la determinación de resolver este problema con lo aprendido y a través de funciones sencillas cargar todo el entorno. Actualmente tomo este cascarón de referencia en mis trabajos de Back-end, tanto por las buenas prácticas como por esta forma de trabajar, mucho mas conveniente para proyectos grandes.',
         repoURL:'https://github.com/cmfraile/MyNodeBackendShell',
         side:false,
         customIndex:3
@@ -213,7 +204,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','pf2.png'),
       nombre:'Portfolio 2.0',
       estado:'03 - 2022',
-      descripcion:'Proyecto con el cual busque consolidar mis conocimientos del MEAN stack tras aprender Node.js, API REST y MongoDB . En este proyecto aprendí las consecuencias de la deuda técnica , la cual se tradució a futuras e incansables incidencias.',
+      descripcion:'Proyecto de consolidación de los conocimientos de MEAN stack . La mayor lección que me dejo esta experiencia no fue aprender la base de sus tecnologías, si no las consecuencias de una deuda técnica, que se acumulaba y extendía en el tiempo. Arreglé el problema pero opte por hacer el posterior portfolio con el objetivo de evitar de manera activa y diligente este problema en cuanto lo conocí. El futuro software requerirá siempre de una mano que lo cuide y atienda, pero construirlo bien desde un principio era algo que me correspondía aprender desde aquí. Una enorme experiencia.',
       side:true,
       customIndex:8
     },
@@ -240,15 +231,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','pgw.jpg'),
       nombre:'Party game',
       estado:'En desarrollo',
-      descripcion:'Pequeño proyecto para afianzar Redux en el cual estoy ocupado para afinar mis habilidades. Tras concluir dicha aplicación en React, decidí aprender React Native y llevarlo a una plataforma movil, donde sin duda es su sitio. Actualmente la estoy porteando.',
-      side:true,
-      customIndex:10
-    },
-    {
-      foto:routerParser('fototrabajos','bg.png'),
-      nombre:'Battle Gamers GAMING BAR',
-      estado:'04 - 2023',
-      descripcion:'Proyecto con el cual he aprendido la mayor parte de los fundamentos BackEnd. En otro repositorio muestro un cascarón del BackEnd que aqui realicé, con abstracciones y sugerencias para resolver el problema que aqui tuve.',
+      descripcion:'Pequeño proyecto para afianzar React + Redux . La aplicación esta acabada, y con el código dispuesto para ser porteado a React Native, sin embargo, su funcionamiento es lo suficientemente complejo y ofrece tantas variables que a través de iterar la app y comprobar su funcionamiento desde la store de Redux, estoy llamando al desastre. Es un pretexto perfecto para aprender testing y lograr desarrollar de manera TDD, pues puedo recoger su uso y comprobar que se cumple desde las funciones individuales hasta el conjunto de acciones de la ruta crítica. No se exactamente que me encontraré, salvo aprendizaje y saldar mi deuda con un imprescindible del sector : los tests .',
       side:true,
       customIndex:10
     },
@@ -256,7 +239,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','ma.jpg'),
       nombre:'MahApps',
       estado:'',
-      descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, pero sobretodo todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en tu stack, apréndelo, y vuelve a la app cuando tengas lo que necesites. Valorando seriamente pasarla a React Native y monetizarla, ya que la tengo documentada y me resulta facil de ejecutar.',
+      descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, y además, todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en su stack, apréndelo, y vuelve a la app cuando tengas lo que necesites. El MahJong es mi juego de mesa favorito , y aquel que me demostró que podía ser un buen programador. Me documenté, aprendí de diversas fuentes, y probé mi capacidad de investigación ante algo extraño e ignoto en nuestra cultura. Me aportó mucha realización, diversión aparte con amigos y familia.',
       repoURL:'https://github.com/cmfraile/MahApps',
       side:true,
       customIndex:12
@@ -267,7 +250,7 @@ const trabajos:trabajoProps[] = [
       estado:'',
       despliegueURL:'https://bcoworks.es',
       repoURL:'https://github.com/cmfraile/PortfolioBcoWorks',
-      descripcion:'Encargo freelance de una web portfolio para un artista, donde se refleje su trabajo, sus tarifas, formulario de contacto y redes sociales. Posee su panel de administración con autenticación mediante Google para que el dueño pueda gestionar la web incluso cambiar el estilo de la misma. Una web vistosa, llamativa y decorada con sus motivos que trate de ser una obra de arte en si misma tal y como desea el cliente. Ha sido el proyecto con el que he aprendido todo lo que se de React y con el he aprendido esta libreria.',
+      descripcion:'Encargo para un artista de una web portfolio. En ella refleja su trabajo, sus tarifas, formulario de contacto y redes sociales. Posee un panel de administración con autenticación mediante Google para que el dueño pueda añadir su contenido a la web, incluso cambiar sus estilos. Una web vistosa, llamativa y decorada con sus motivos que logre expresar su mundo. Esta realizada en MERN stack, incluso lo porteé a Next.JS para experimentar con dejar la API de acceso exclusivo al Front y generar un HTML plano diario con el nuevo contenido para ganar en rendimiento, a costa de perder ciertas virtudes estéticas que resolví mas tarde. Gracias a este proyecto aprendí MERN y logré entrar en detalle con estas tecnologías.',
       side:true,
       customIndex:1
     },
