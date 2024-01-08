@@ -247,7 +247,7 @@ const trabajos:trabajoProps[] = [
     {
       foto:routerParser('fototrabajos','bico.jpg'),
       nombre:'BcoWorks',
-      estado:'',
+      estado:'10 - 2023',
       despliegueURL:'https://bcoworks.es',
       repoURL:'https://github.com/cmfraile/PortfolioBcoWorks',
       descripcion:'Encargo para un artista de una web portfolio. En ella refleja su trabajo, sus tarifas, formulario de contacto y redes sociales. Posee un panel de administración con autenticación mediante Google para que el dueño pueda añadir su contenido a la web, incluso cambiar sus estilos. Una web vistosa, llamativa y decorada con sus motivos que logre expresar su mundo. Esta realizada en MERN stack, incluso lo porteé a Next.JS para experimentar con dejar la API de acceso exclusivo al Front y generar un HTML plano diario con el nuevo contenido para ganar en rendimiento, a costa de perder ciertas virtudes estéticas que resolví mas tarde. Gracias a este proyecto aprendí MERN y logré entrar en detalle con estas tecnologías.',
