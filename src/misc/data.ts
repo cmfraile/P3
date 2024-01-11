@@ -45,7 +45,7 @@ const nombreYOficio:string[] = [
 ]
 
 const presentacion:string =
-'Desarrollador web y técnico informático que tras su experiencia en helpdesk, decidió continuar su formación de programación tras el parón que supuso el Covid para muchos.\nEl confinamiento fue una época ideal para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario : Aprendiendo nuevas tecnologías, rodando en ellas mas allá de su estricto estudio, todo orientado a estar lo mas preparado posible de cara a trabajar en un futuro equipo .\nMi objetivo es ser parte de un proyecto, donde pueda recibir conocimiento y experiencia de ese entorno para aplicarlo en nuestro software. Trabajar estrictamente solo no demora mucho mas la resolución de problemas, pero hackatones y otros eventos del sector me aportan las "vibras" por las que deseo desempeñar esta profesión.'
+'Desarrollador web y técnico informático que tras su experiencia en helpdesk, decidió continuar su formación de programación tras el parón que supuso el Covid para muchos.\nEl confinamiento fue una época ideal para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario: Aprendiendo nuevas tecnologías, rodando en ellas mas allá de su estricto estudio, todo orientado a estar lo mas preparado posible de cara a trabajar en un futuro equipo .\nMi objetivo es ser parte de un proyecto, donde pueda recibir conocimiento y experiencia de ese entorno para aplicarlo en nuestro software. Trabajar estrictamente solo no demora mucho mas la resolución de problemas, pero hackatones y otros eventos del sector poseen un agradable entorno por el que deseo desempeñar esta profesión.'
 
 
 const formacion:formationProps[] = [
