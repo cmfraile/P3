@@ -39,6 +39,11 @@ Object.keys(skillsData).map(x => {
   skillsData[x].img = routerParser('stackIcons',`${x}.png`)
 });
 
+const nombreYOficio:string[] = [
+  'Carlos Manuel Fraile Gómez',
+  ' - Desarrollador multi-stack y técnico informático - '
+]
+
 const presentacion:string =
 'Desarrollador web y técnico informático que tras su experiencia en helpdesk, decidió continuar su formación de programación tras el parón que supuso el covid para muchos.\nEl confinamiento fue una época ideal para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario : Aprendiendo nuevas tecnologías, rodando en ellas mas allá de su estricto estudio, con pequeños encargos e ideas, buscando comprender y atender de manera constante las necesidades del sector de cara a trabajar en un equipo.\nMi objetivo es ser parte de un proyecto, donde pueda recibir conocimiento y experiencia de otros miembros para aplicarlo en nuestro software. Trabajar solo no demora mucho mas la resolución de problemas, pero hackatones y otros eventos del gremio me aportan unas dinámicas de trabajo que deseo de diario en mi carrera por lo que me hacen crecer.\nEn mi tiempo libre disfruto de la reuniones entre amigos , el ejercicio y de los juegos que impliquen el uso de la lógica y el ingenio. Me encanta la cultura asiática y la tecnología.'
 
@@ -46,7 +51,14 @@ const presentacion:string =
 const formacion:formationProps[] = [
 
     {
-        materia:'Desarrollo web Frontend (HTML, CSS, Bootstrap, JavaScript, Angular, React/React Native/Next.js, Redux y RxJS), Node (API REST y WebSockets), Docker, Python, Django, PHP y MySQL.',
+        materia:`MEAN y MERN Stack .
+
+        Front - End : React/React Native, Next.js , Angular , JS / TS , Redux y RxJS , HTML, CSS, Bootstrap, Sass .
+        Back - End : Node ( Express.js , Socket.io ) .
+        BBDD : MongoDB .
+        Despliegues : Docker .
+        
+        Otros : Python, Django, PHP y MySQL .`,
         periodo:'2020 - actualidad',
         entidad:'UDEMY',
         side:false
@@ -67,13 +79,6 @@ const formacion:formationProps[] = [
     },
 
     {
-        materia:'Ayudante de Cocina',
-        periodo:'2021',
-        entidad:'Casa Manolete - Bistro',
-        side:true
-    },
-
-    {
         materia:'Técnico en serigrafia',
         periodo:'2010 - 2011',
         entidad:'Escuela de arte : Dionisio Ortíz',
@@ -83,12 +88,13 @@ const formacion:formationProps[] = [
 ];
 
 const datosDeInteres:string[] = [
-    'Preparándome el C1 de inglés','Especial interés en teletrabajar.','Carnet manipulador de alimentos.',
+    'Acudiendo a la academia de inglés .',
+    'Entorno propio y apto en casa para el teletrabajo .'
 ].sort();
 
 const experiencia:experienciaProps[] = [
       {
-        puesto:'Desarrollo software por libre',
+        puesto:'Desarrollo software freelance',
         inicio:2022,
         periodo:'desde Septiembre',
         lugar:'',
@@ -124,16 +130,7 @@ const experiencia:experienciaProps[] = [
         customIndex:5
       },
       {
-        puesto:'Ayudante de cocina',
-        inicio:2021,
-        periodo:'1 mes',
-        lugar:'Casa Manolete - Bistro',
-        descripcion:'Producir aquellas elaboraciones que deben de estar listas para el servicio, así como su envasado, etiquetado, estabilización, regeneración y distribución entre los diferentes congeladores y timbres.',
-        side:true,
-        customIndex:6
-      },
-      {
-        puesto:'Ayudante de taller en prácticas',
+        puesto:'Ayudante de taller',
         inicio:2011,
         periodo:'1 mes',
         lugar:'Serimagen',
@@ -152,7 +149,7 @@ const trabajos:trabajoProps[] = [
       descripcion:'Pequeño proyecto entre amigos que tomamos tras documentarme en internet sobre este hobby derivado del aeromodelismo. El resultado fue espectacular. Fue mi primera experiencia de holgado aprendizaje autodidacta a través de internet.',
       despliegueURL:'https://photos.app.goo.gl/gcjNkc7Gq6PAcid47',
       side:true,
-      customIndex:13
+      customIndex:15
     },
     {
       foto:routerParser('fototrabajos','pf3.jpg'),
@@ -161,7 +158,7 @@ const trabajos:trabajoProps[] = [
       descripcion:'Portfolio realizado en una semana que lograse representarme mejor en la actualidad . Aquí busco un diseño claro y minimalista, donde menos sea mas. Es el trabajo que estas viendo ahora mismo.',
       repoURL:'https://github.com/cmfraile/P3',
       side:false,
-      customIndex:2
+      customIndex:15
     },
     {
         foto:routerParser('fototrabajos','cleanSolid.jpg'),
@@ -170,7 +167,7 @@ const trabajos:trabajoProps[] = [
         descripcion:'Mis apuntes en MarkDown acerca de lo aprendido en un curso de Clean code, patrones, antipatrones ( STUPID ) y SOLID. Siempre los tengo impresos y sobre mi mesa de trabajo , pues me siguen ayudando muchísimo. Tienes el repositorio justo abajo. Todo tuyo. Espero que te sea de ayuda.',
         repoURL:'https://github.com/cmfraile/SOLID-CleanCode',
         side:false,
-        customIndex:4
+        customIndex:7
       },
     {
         foto:routerParser('fototrabajos','backend.jpg'),
@@ -179,17 +176,17 @@ const trabajos:trabajoProps[] = [
         descripcion:'Cascarón de Back-end enfocado a API REST, realizado posterior al holgado aprendizaje de patrones de diseño básicos y buenas prácticas, aparte de explotar aun más Node.JS con el empleo de abstracciones, clases y explotando el lenguaje. Aprendí API REST a través de funciones, y eso esta bien para ver de una forma diáfana el funcionamiento y los fundamentos, pero implicaba repetir mucho código y la misma tarea para cada controlador y/o colección de datos . Tome la determinación de resolver este problema con lo aprendido y a través de funciones sencillas cargar todo el entorno. Actualmente tomo este cascarón de referencia en mis trabajos de Back-end, tanto por las buenas prácticas como por esta forma de trabajar, mucho mas conveniente para proyectos grandes.',
         repoURL:'https://github.com/cmfraile/MyNodeBackendShell',
         side:false,
-        customIndex:3
+        customIndex:5
     },
     {
       foto:routerParser('fototrabajos','pt1.jpg'),
       nombre:'Prueba técnica de libreria',
       estado:'07 - 2022',
-      descripcion:'Pueba técnica en la cual teníamos que simular el buscador de una librería, que filtrase por numero de páginas, género y permitiera hacer un carrito con libros. Fue mi primera experiencia con Next.js, framework el cual aprendí previo a ejecutar la prueba.',
+      descripcion:'Pueba técnica en la cual teníamos que simular el buscador de una librería, que filtrase por numero de páginas, género y permitiera hacer un carrito con libros. Fue mi primera experiencia con Next.js, framework el cual aprendí previo a ejecutar la prueba gracias a un directo.',
       repoURL:'https://github.com/cmfraile/pruebasTecnicasMIDU/tree/pruebaT%C3%A9cnica/pruebas/01-reading-list/cmfraile',
       despliegueURL:'https://01-reading-list-deploy-83ah247eo-cmfraile.vercel.app/',
       side:false,
-      customIndex:5
+      customIndex:3
     },
     {
       foto:routerParser('fototrabajos','pf1.jpg'),
@@ -198,7 +195,7 @@ const trabajos:trabajoProps[] = [
       descripcion:'Fue mi primer portfolio realizado tras aprender Python, Django y refrescar HTML/CSS . Una experiencia muy didáctica e importante que me mostró la razón de porque las aplicaciones se dividen en varias partes y hacen uso de varias tecnologías. A partir de aqui empecé a definir mi stack y afinar mis habilidades con esta nueva orientación.',
       repoURL:'https://github.com/cmfraile/WebPersonalDjango',
       side:true,
-      customIndex:7
+      customIndex:19
     },
     {
       foto:routerParser('fototrabajos','pf2.png'),
@@ -206,26 +203,26 @@ const trabajos:trabajoProps[] = [
       estado:'03 - 2022',
       descripcion:'Proyecto de consolidación de los conocimientos de MEAN stack . La mayor lección que me dejo esta experiencia no fue aprender la base de sus tecnologías, si no las consecuencias de una deuda técnica, que se acumulaba y extendía en el tiempo. Arreglé el problema pero opte por hacer el posterior portfolio con el objetivo de evitar de manera activa y diligente este problema en cuanto lo conocí. El futuro software requerirá siempre de una mano que lo cuide y atienda, pero construirlo bien desde un principio era algo que me correspondía aprender desde aquí. Una enorme experiencia.',
       side:true,
-      customIndex:8
+      customIndex:15
     },
     {
       foto:routerParser('fototrabajos','n1.png'),
       nombre:'NUWE - Hackaton',
       estado:'06 - 2021',
       descripcion:'Hackaton organizada por NUWE con motivo de su inauguración. Fue mi primera experiencia en hackatones y pese a que no permitian usar Angular, pues el reto era de React, acepté el reto por llevarme la experiencia.',
-      despliegueURL:'https://github.com/cmfraile/HackatonNuwe2021FrontCMFG',
+      repoURL:'https://github.com/cmfraile/HackatonNuwe2021FrontCMFG',
       side:false,
-      customIndex:6,
+      customIndex:8,
     },
     {
       foto:routerParser('fototrabajos','bdt.jpg'),
       nombre:'Barcelona Digital Talent - Hackaton',
       estado:'11 - 2021',
-      descripcion:'Hackatón organizada por el BDT y bajo la plataforma de NUWE. En ella teniamos que hacer una pasarela de pago similar a la del ejercicio. Completarlo y ademas añadirle unos cuantos detalles vistosos me hizo quedar primero de entre 40 participantes. Una gran experiencia con la curiosidad de "ganar" la hackatón.',
+      descripcion:'Hackatón organizada por el BDT y bajo la plataforma de NUWE. En ella teniamos que hacer una pasarela de pago similar a la del ejercicio. Quede el primero de entre 19 participantes. Una gran experiencia.',
       despliegueURL:'https://cmfraile.github.io/Hackaton---Jump2Digital---BCN---Carlos-Fraile/',
       repoURL:'https://github.com/cmfraile/Hackaton---Jump2Digital---BCN---Carlos-Fraile',
       side:false,
-      customIndex:5
+      customIndex:2
     },
     {
       foto:routerParser('fototrabajos','pgw.jpg'),
@@ -233,7 +230,7 @@ const trabajos:trabajoProps[] = [
       estado:'En desarrollo',
       descripcion:'Pequeño proyecto para afianzar React + Redux . La aplicación esta acabada, y con el código dispuesto para ser porteado a React Native, sin embargo, su funcionamiento es lo suficientemente complejo y ofrece tantas variables que a través de iterar la app y comprobar su funcionamiento desde la store de Redux, estoy llamando al desastre. Es un pretexto perfecto para aprender testing y lograr desarrollar de manera TDD, pues puedo recoger su uso y comprobar que se cumple desde las funciones individuales hasta el conjunto de acciones de la ruta crítica. No se exactamente que me encontraré, salvo aprendizaje y saldar mi deuda con un imprescindible del sector : los tests .',
       side:true,
-      customIndex:10
+      customIndex:19
     },
     {
       foto:routerParser('fototrabajos','ma.jpg'),
@@ -242,7 +239,7 @@ const trabajos:trabajoProps[] = [
       descripcion:'Primer intento de hacer una aplicación con Angular tras aprender sus fundamentos. Este incluida el visionado de reglas, de jugadas, y un monitor de seguimiento del puntaje, tanto en la variante china, como en la cantonesa. A medida que programaba la app, vi lo que podía hacer, y además, todo lo que debía de seguir aprendiendo. Esta app me enseño que si algo falta en su stack, apréndelo, y vuelve a la app cuando tengas lo que necesites. El MahJong es mi juego de mesa favorito , y aquel que me demostró que podía ser un buen programador. Me documenté, aprendí de diversas fuentes, y probé mi capacidad de investigación ante algo extraño e ignoto en nuestra cultura. Me aportó mucha realización, diversión aparte con amigos y familia.',
       repoURL:'https://github.com/cmfraile/MahApps',
       side:true,
-      customIndex:12
+      customIndex:20
     },
     {
       foto:routerParser('fototrabajos','bico.jpg'),
@@ -250,10 +247,10 @@ const trabajos:trabajoProps[] = [
       estado:'10 - 2023',
       despliegueURL:'https://bcoworks.es',
       repoURL:'https://github.com/cmfraile/PortfolioBcoWorks',
-      descripcion:'Encargo para un artista de una web portfolio. En ella refleja su trabajo, sus tarifas, formulario de contacto y redes sociales. Posee un panel de administración con autenticación mediante Google para que el dueño pueda añadir su contenido a la web, incluso cambiar sus estilos. Una web vistosa, llamativa y decorada con sus motivos que logre expresar su mundo. Esta realizada en MERN stack, incluso lo porteé a Next.JS para experimentar con dejar la API de acceso exclusivo al Front y generar un HTML plano diario con el nuevo contenido para ganar en rendimiento, a costa de perder ciertas virtudes estéticas que resolví mas tarde. Gracias a este proyecto aprendí MERN y logré entrar en detalle con estas tecnologías.',
+      descripcion:'Encargo para un artista de una web portfolio. En ella refleja su trabajo, sus tarifas, formulario de contacto y redes sociales. Posee un panel de administración con autenticación mediante Google para que el dueño pueda añadir su contenido a la web, incluso cambiar sus estilos. Una web vistosa, llamativa y decorada con sus motivos que logre expresar su mundo. Esta realizada en MERN stack , incluso ensayé el front con Next.JS para conocer esta tecnología. Este proyecto lo he usado para aprender el stack de manera exhaustiva, indagar en detalle en su funcionamiento y lo mas importante, discernir entre implantaciones necesarias y superfluas. Este proyecto me otorgó una agilidad que necesitaba por muchos motivos.',
       side:true,
       customIndex:1
     },
   ];
 
-export { formacion , datosDeInteres , experiencia , trabajos , skillsData , presentacion }
+export { nombreYOficio , formacion , datosDeInteres , experiencia , trabajos , skillsData , presentacion }
