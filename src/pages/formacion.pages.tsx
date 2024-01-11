@@ -13,7 +13,7 @@ export const sideMargin = ({x,a,i}:{x:any,a:any[],i:number}):boolean => {
 const RootFormación = () => {
 
     return(
-    <div className="root_component root_formacion" id='R3'>
+    <div className="root_component root_formacion" id='R5'>
         <h2>Formación académica</h2>
         <div className="formationList">
             {formacion

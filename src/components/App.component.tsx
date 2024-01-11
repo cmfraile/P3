@@ -15,9 +15,9 @@ const App = () => {
     <MainLayout>
       <RootPortada/>
       <RootPresentacion/>
-      <RootFormación/>
-      <RootExperiencia/>
       <RootTrabajos/>
+      <RootExperiencia/>
+      <RootFormación/>
       <RootContacto/>
     </MainLayout>
   )

@@ -7,7 +7,7 @@ import { trabajos } from '../misc/data';
 const RootTrabajos = () => {
 
     return(
-        <div className="root_component root_trabajos" id='R5'>
+        <div className="root_component root_trabajos" id='R3'>
             <h2>Trabajos</h2>
             <div className="trabajosList">
                 {trabajos

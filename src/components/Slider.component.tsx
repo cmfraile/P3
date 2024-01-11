@@ -4,7 +4,7 @@ import SvgAdapter from './SvgAdapter.component';
 const Slider = () => {
 
     const mainColor:string = '#2C3E50' ;
-    const svgArray = ['portada','presentación','formacion','experiencia','trabajos','contacto'];
+    const svgArray = ['portada','presentación','trabajos','experiencia','formacion','contacto'];
 
     return(
         <div className="slider animate__animated animate__backInLeft animate__slower">
