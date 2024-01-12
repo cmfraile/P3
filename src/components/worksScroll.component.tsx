@@ -1,6 +1,13 @@
 import { workBook } from "../pages/trabajos.pages";
 
-interface circleAndVoidProps { index:number , fn:() => boolean };
+interface isClickable { isClickable?:boolean };
+interface circleAndVoidProps extends isClickable { index:number , fn:() => void };
+
+const onClickIcon = () => {
+    window.location.href = `#R2`;
+    let uri = window.location.toString();
+    window.history.replaceState({},document.title,uri.substring(0,uri.indexOf('#')));
+}
 
 const Circle = ( {index,fn}:circleAndVoidProps ) => {
 
@@ -12,10 +19,16 @@ const Circle = ( {index,fn}:circleAndVoidProps ) => {
     
 }
 
-const Void = ( {index,fn}:circleAndVoidProps ) => {
+const Void = ( {index,fn,isClickable}:circleAndVoidProps ) => {
+
+    const onClick = () => {
+        onClickIcon()
+        fn()
+    }
 
     return(
         <svg xmlns="http://www.w3.org/2000/svg"
+            onClick={onClick}
             style={{cursor:'pointer'}}
             className="button" 
             viewBox="0 0 16 16">
@@ -25,18 +38,21 @@ const Void = ( {index,fn}:circleAndVoidProps ) => {
 
 }
 
-interface arrowProps {pointsToTheRight:boolean,scroll:() => void}
-const Arrow = ({pointsToTheRight,scroll}:arrowProps) => {
+interface arrowProps extends isClickable {pointsToTheRight:boolean,scroll:() => void}
+const Arrow = ({pointsToTheRight,scroll,isClickable}:arrowProps) => {
 
     const onClick = () => {
-        
+        onClickIcon()
         scroll()
     }
 
     return (
         <svg
-            onClick={onClick}
-            style={{transform:(pointsToTheRight) ? 'rotate(180deg)' : ''}}
+            onClick={(isClickable) ? onClick : () => {} }
+            style={{
+                cursor:(isClickable) ? 'pointer' : '',
+                transform:(pointsToTheRight) ? 'rotate(180deg)' : ''
+            }}
             xmlns="http://www.w3.org/2000/svg" 
             className="arrow" 
             viewBox="0 0 16 16">
@@ -48,19 +64,23 @@ const Arrow = ({pointsToTheRight,scroll}:arrowProps) => {
 
 interface workScrollProps { 
     workBook:workBook , 
-    left:() => boolean , right:() => boolean , button:(index:number,newIndex:number) => boolean
+    left:() => void , right:() => void , button:(newIndex:number) => void
 }
 const WorkScroll = ({workBook,left,right,button}:workScrollProps) => {
 
     return (
         <div className="workSlider">
-            <Arrow pointsToTheRight={false} scroll={left} />
+            <Arrow pointsToTheRight={false} scroll={left}
+                isClickable={(workBook.index >= 0)}
+            />
             {workBook.pages.map(
                 (value,index) => (index == workBook.index) 
-                ? <Circle key={index} index={index} fn={() => button(workBook.index,index)} /> 
-                : <Void key={index} index={index} fn={() => button(workBook.index,index)} />
+                ? <Circle key={index} index={index} fn={() => button(index)} isClickable={false} /> 
+                : <Void key={index} index={index} fn={() => button(index)} isClickable={true} />
             )}
-            <Arrow pointsToTheRight={true} scroll={right} />
+            <Arrow pointsToTheRight={true} scroll={right}
+                isClickable={(workBook.index <= workBook.pages.length)}
+            />
         </div>
     )
 

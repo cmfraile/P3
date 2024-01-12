@@ -14,28 +14,22 @@ const RootTrabajos = () => {
 
     const commands = {
         left:() => { 
-            if(workBook?.index == 0){ return false }else{
             setWorkBook(v => {
                 if(!v){return v}
                 return ({...v,index:v.index-1})
             })
-            return true
-        }},
+        },
         right:() => { 
-            if(workBook?.index == workBook?.pages.length){ return false }else{
             setWorkBook(v => {
                 if(!v){return v}
                 return ({...v,index:v.index-1})
             })
-            return true
-        }},
-        button:(index:number,newIndex:number) => {
-            if(index == newIndex){ return false }
+        },
+        button:(newIndex:number) => {
             setWorkBook(v => {
                 if(!v){return}
                 return({...v,index:newIndex})
             });
-            return true
         }
     }
 
@@ -47,7 +41,7 @@ const RootTrabajos = () => {
             newBook.pages.push(lastPage+newBook.longOfPage)
         };
         setWorkBook(newBook)
-    },[trabajos]);
+    },[]);
 
     return(
         <div className="root_component root_trabajos" id='R3'>
