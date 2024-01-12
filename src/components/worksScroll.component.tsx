@@ -1,6 +1,6 @@
 import { workBook } from "../pages/trabajos.pages";
 
-interface circleAndVoidProps { index:number , fn:() => void|false };
+interface circleAndVoidProps { index:number , fn:() => boolean };
 
 const Circle = ( {index,fn}:circleAndVoidProps ) => {
 
@@ -46,7 +46,10 @@ const Arrow = ({pointsToTheRight,scroll}:arrowProps) => {
 
 }
 
-interface workScrollProps { workBook:workBook , left:() => boolean , right:() => boolean , button:(newIndex:number) => void }
+interface workScrollProps { 
+    workBook:workBook , 
+    left:() => boolean , right:() => boolean , button:(index:number,newIndex:number) => boolean
+}
 const WorkScroll = ({workBook,left,right,button}:workScrollProps) => {
 
     return (
@@ -54,8 +57,8 @@ const WorkScroll = ({workBook,left,right,button}:workScrollProps) => {
             <Arrow pointsToTheRight={false} scroll={left} />
             {workBook.pages.map(
                 (value,index) => (index == workBook.index) 
-                ? <Circle key={index} index={index} fn={() => {}} /> 
-                : <Void key={index} index={index} fn={() => {}} />
+                ? <Circle key={index} index={index} fn={() => button(workBook.index,index)} /> 
+                : <Void key={index} index={index} fn={() => button(workBook.index,index)} />
             )}
             <Arrow pointsToTheRight={true} scroll={right} />
         </div>
