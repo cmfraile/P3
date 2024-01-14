@@ -15,14 +15,14 @@ const RootTrabajos = () => {
     const commands = {
         left:() => { 
             setWorkBook(v => {
-                if(!v){return v}
+                if(!v || workBook?.index == 0){return v}
                 return ({...v,index:v.index-1})
             })
         },
         right:() => { 
             setWorkBook(v => {
-                if(!v){return v}
-                return ({...v,index:v.index-1})
+                if(!v || workBook?.index == (workBook?.pages.length as number) - 1){return v}
+                return ({...v,index:v.index+1})
             })
         },
         button:(newIndex:number) => {
@@ -35,7 +35,7 @@ const RootTrabajos = () => {
 
     useLayoutEffect(() => {
         const newBook:workBook = { longOfPage:4 , pages:[0] , index:0 } ;
-        const paginas = Math.ceil(trabajos.length/newBook.longOfPage);
+        const paginas = Math.ceil(trabajos.length/newBook.longOfPage) - 1;
         for(let i = 1 ; i <= paginas ; i++){
             const lastPage = newBook.pages[newBook.pages.length - 1]; 
             newBook.pages.push(lastPage+newBook.longOfPage)

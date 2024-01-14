@@ -4,7 +4,7 @@ interface isClickable { isClickable?:boolean };
 interface circleAndVoidProps extends isClickable { index:number , fn:() => void };
 
 const onClickIcon = () => {
-    window.location.href = `#R2`;
+    window.location.href = `#R3`;
     let uri = window.location.toString();
     window.history.replaceState({},document.title,uri.substring(0,uri.indexOf('#')));
 }
@@ -21,10 +21,7 @@ const Circle = ( {index,fn}:circleAndVoidProps ) => {
 
 const Void = ( {index,fn,isClickable}:circleAndVoidProps ) => {
 
-    const onClick = () => {
-        onClickIcon()
-        fn()
-    }
+    const onClick = () => { onClickIcon() ; fn() };
 
     return(
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -50,6 +47,7 @@ const Arrow = ({pointsToTheRight,scroll,isClickable}:arrowProps) => {
         <svg
             onClick={(isClickable) ? onClick : () => {} }
             style={{
+                opacity:(isClickable) ? '1' : '0.25',
                 cursor:(isClickable) ? 'pointer' : '',
                 transform:(pointsToTheRight) ? 'rotate(180deg)' : ''
             }}
@@ -71,7 +69,7 @@ const WorkScroll = ({workBook,left,right,button}:workScrollProps) => {
     return (
         <div className="workSlider">
             <Arrow pointsToTheRight={false} scroll={left}
-                isClickable={(workBook.index >= 0)}
+                isClickable={(workBook.index > 0)}
             />
             {workBook.pages.map(
                 (value,index) => (index == workBook.index) 
@@ -79,7 +77,7 @@ const WorkScroll = ({workBook,left,right,button}:workScrollProps) => {
                 : <Void key={index} index={index} fn={() => button(index)} isClickable={true} />
             )}
             <Arrow pointsToTheRight={true} scroll={right}
-                isClickable={(workBook.index <= workBook.pages.length)}
+                isClickable={(workBook.index < workBook.pages.length-1)}
             />
         </div>
     )
