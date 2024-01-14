@@ -49,7 +49,7 @@ const RootTrabajos = () => {
             {
             (workBook) &&
                 <>    
-                    <div className="trabajosList animate__animated animate__fadeIn">
+                    <div className="trabajosList">
                         {trabajos
                         .sort( (a,b) => a.customIndex - b.customIndex)
                         .map( (x,i) => <TrabajoCard     key={i} 

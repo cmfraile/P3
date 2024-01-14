@@ -1,10 +1,11 @@
+import { useEffect } from "react"
 import LinkIcon from "../linkIcon.component"
 
 export interface trabajoProps { foto:string , nombre:string , estado:string , descripcion:string , side:boolean , customIndex:number , despliegueURL?:string , repoURL?:string }
 const TrabajoCard = ({foto,nombre,estado,descripcion,despliegueURL,side,repoURL}:trabajoProps) => {
 
     return(
-        <div className={'trabajoCard'}>
+        <div className={'trabajoCard animate__animated animate__fadeIn animate__faster'}>
             <div className="foto bgReset" style={{backgroundImage: `url(${foto})`}}/>
             <div className="workData">
                 <p className="nombre">{nombre}</p>
