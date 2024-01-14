@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import LinkIcon from "../linkIcon.component"
 
 export interface trabajoProps { foto:string , nombre:string , estado:string , descripcion:string , side:boolean , customIndex:number , despliegueURL?:string , repoURL?:string }

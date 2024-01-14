@@ -2,7 +2,7 @@ import '../styles/pages/trabajos.sass'
 import TrabajoCard from '../components/cards/trabajo.card';
 import Trabajos from '../assets/svgs/trabajos.svg';
 
-import { trabajos } from '../misc/data';
+import { trabajos as ttest } from '../misc/data';
 import WorkScroll from '../components/worksScroll.component';
 import { useLayoutEffect, useState } from 'react';
 
@@ -10,6 +10,8 @@ export interface workBook { longOfPage:number , pages:number[] , index:number }
 
 const RootTrabajos = () => {
 
+    const trabajos = ttest;
+    
     const [ workBook , setWorkBook ] = useState<workBook|undefined>(undefined) ;
 
     const commands = {
