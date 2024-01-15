@@ -112,7 +112,7 @@ const experiencia:experienciaProps[] = [
         customIndex:3
       },
       {
-        puesto:'Técnico superior de informática en prácticas',
+        puesto:'Técnico superior de informática',
         inicio:2017,
         periodo:'3 meses',
         lugar:'FEPAMIC',
@@ -121,7 +121,7 @@ const experiencia:experienciaProps[] = [
         customIndex:4
       },
       {
-        puesto:'Técnico en microinformática en prácticas',
+        puesto:'Técnico en microinformática',
         inicio:2014,
         periodo:'3 meses',
         lugar:'Afocor',
@@ -201,7 +201,7 @@ const trabajos:trabajoProps[] = [
       foto:routerParser('fototrabajos','pf2.png'),
       nombre:'Portfolio 2.0',
       estado:'03 - 2022',
-      descripcion:'Proyecto de consolidación de los conocimientos de MEAN stack . La mayor lección que me dejo esta experiencia no fue aprender la base de sus tecnologías, si no las consecuencias de una deuda técnica, que se acumulaba y extendía en el tiempo. Arreglé el problema pero opte por hacer el posterior portfolio con el objetivo de evitar de manera activa y diligente este problema en cuanto lo conocí. El futuro software requerirá siempre de una mano que lo cuide y atienda, pero construirlo bien desde un principio era algo que me correspondía aprender desde aquí. Una enorme experiencia.',
+      descripcion:'Proyecto de consolidación de los conocimientos de MEAN stack . La mayor lección que me dejo esta experiencia no fue aprender la base de sus tecnologías, si no las consecuencias de una deuda técnica, que se acumulaba y extendía en el tiempo. Arreglé el problema pero opte por hacer el posterior portfolio con el objetivo de evitar de manera proactiva y diligente este problema en cuanto lo conocí. El futuro software requerirá siempre de una mano que lo cuide y atienda, pero construirlo bien desde un principio era algo que me correspondía aprender desde aquí. Una enorme experiencia.',
       side:true,
       customIndex:15
     },
