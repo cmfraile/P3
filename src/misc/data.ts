@@ -87,7 +87,7 @@ const datosDeInteres:string[] = [
 
 const experiencia:experienciaProps[] = [
       {
-        puesto:'Desarrollo software freelance',
+        puesto:'Desarrollo web freelance ( MERN y MEAN )',
         inicio:2022,
         periodo:'desde Septiembre',
         lugar:'',
