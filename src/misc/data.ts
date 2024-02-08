@@ -13,20 +13,21 @@ let skillsData:{[key:string]:dataForDataVizProps} = {
   'bootstrap':{practica:36,experiencia:16,mainStack:false},
   'css3':{practica:36,experiencia:16,mainStack:false},
   'django':{practica:3,experiencia:0,mainStack:false},
-  'docker':{practica:27,experiencia:16,mainStack:true},
+  'docker':{practica:27,experiencia:17,mainStack:true},
   'express':{practica:22,experiencia:16,mainStack:true},
   'html5':{practica:36,experiencia:16,mainStack:false},
   'mongodb':{practica:22,experiencia:16,mainStack:true},
-  'nodejs':{practica:22,experiencia:16,mainStack:true},
+  'nodejs':{practica:22,experiencia:17,mainStack:true},
   'php':{practica:2,experiencia:0,mainStack:false},
   'mySQL':{practica:2,experiencia:0,mainStack:false},
   'python':{practica:3,experiencia:0,mainStack:false},
-  'react':{practica:12,experiencia:13,mainStack:true},
+  'react':{practica:12,experiencia:17,mainStack:true},
   'reactiveX':{practica:22,experiencia:3,mainStack:false},
   'redux':{practica:3,experiencia:7,mainStack:true},
   'socket.io':{practica:2,experiencia:0,mainStack:false},
-  'typescript':{practica:26,experiencia:16,mainStack:true},
+  'typescript':{practica:26,experiencia:17,mainStack:true},
   'sass':{practica:36,experiencia:16,mainStack:false},
+  'jest':{practica:0,experiencia:1,mainStack:true},
 }
 
 Object.keys(skillsData).map(x => {
@@ -45,7 +46,7 @@ const nombreYOficio:string[] = [
 ]
 
 const presentacion:string =
-'Desarrollador web y técnico informático que tras su experiencia en helpdesk, decidió continuar su formación de programación tras el parón que supuso el Covid para muchos.\nEl confinamiento fue una época ideal para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario: Aprendiendo nuevas tecnologías, rodando en ellas mas allá de su estricto estudio, todo orientado a estar lo mas preparado posible de cara a trabajar en un futuro equipo .\nMi objetivo es ser parte de un proyecto, donde el conocimiento y experiencia adquiridos pueda ser aplicado en nuestro software. Trabajar estrictamente solo no demora mucho mas la resolución de problemas, pero hackatones, eventos del sector y programar en equipo poseen un agradable entorno por el que deseo desempeñar esta profesión.'
+'Desarrollador web y técnico informático que tras su experiencia en helpdesk, decidió continuar su formación de programación tras el parón que supuso el Covid para muchos.\nEl confinamiento fue una época ideal para ampliar conocimientos y obtener experiencia en el campo del desarrollo software, en el cual sigo creciendo de diario: Aprendiendo nuevas tecnologías, rodando en ellas mas allá de su estricto estudio, todo orientado a estar lo mas preparado posible de cara a trabajar en un futuro equipo .\nMi objetivo es ser parte de un proyecto, donde el conocimiento y experiencia adquiridos pueda ser aplicado en nuestro software. Trabajar estrictamente solo no demora mucho mas la resolución de problemas, pero hackatones, eventos del sector y programar en equipo poseen un agradable entorno, motivo por el que deseo desempeñar esta profesión.'
 
 
 const formacion:formationProps[] = [
@@ -57,8 +58,7 @@ const formacion:formationProps[] = [
         Back - End : Node ( Express.js , Socket.io ) .
         BBDD : MongoDB .
         Despliegues : Docker .
-        
-        Otros : Python, Django, PHP y MySQL .`,
+        Otros : SOLID , TDD con Jest .`,
         periodo:'2020 - actualidad',
         entidad:'UDEMY',
         side:false

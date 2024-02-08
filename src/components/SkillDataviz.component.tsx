@@ -28,16 +28,20 @@ const SkillDataviz = () => {
   }
 
   const parsed:dataInView[] = Object.keys(skillsData)
+  
   .sort( (a,b) => {
     const accumulated = (index:string) => skillsData[index].experiencia + skillsData[index].practica ;
     if(accumulated(a) < accumulated(b)){return 1};
     if(accumulated(a) > accumulated(b)){return -1};
     return 0
   })
+
   .sort((a,b) => {
-    //return Number(skillsData[b].mainStack) - Number(skillsData[a].mainStack);
+    return Number(skillsData[b].mainStack) - Number(skillsData[a].mainStack);
+    return skillsData[b].experiencia - skillsData[a].experiencia ;
     return 0
   })
+  
   .map( x => {
     const { img , practica , experiencia , mainStack } = skillsData[x];
     return {name:x,img,practica,experiencia,suma:practica+experiencia}
