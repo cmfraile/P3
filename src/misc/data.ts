@@ -21,13 +21,13 @@ let skillsData:{[key:string]:dataForDataVizProps} = {
   'php':{practica:2,experiencia:0,mainStack:false},
   'mySQL':{practica:2,experiencia:0,mainStack:false},
   'python':{practica:3,experiencia:0,mainStack:false},
-  'react':{practica:12,experiencia:23,mainStack:true},
+  'react':{practica:12,experiencia:21,mainStack:true},
   'reactiveX':{practica:22,experiencia:3,mainStack:false},
-  'redux':{practica:3,experiencia:12,mainStack:true},
+  'redux':{practica:3,experiencia:10,mainStack:true},
   'socket.io':{practica:2,experiencia:0,mainStack:false},
   'typescript':{practica:26,experiencia:23,mainStack:true},
   'sass':{practica:36,experiencia:16,mainStack:false},
-  'jest':{practica:0,experiencia:5,mainStack:true},
+  'jest':{practica:0,experiencia:3,mainStack:true},
 }
 
 Object.keys(skillsData).map(x => {
