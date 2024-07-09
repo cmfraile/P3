@@ -59,7 +59,7 @@ const formacion:formationProps[] = [
         BBDD : MongoDB .
         Despliegues : Docker .
         Otros : SOLID , TDD con Jest .`,
-        periodo:'2020 - actualidad',
+        periodo:'2020 - 2024',
         entidad:'UDEMY',
         side:false
     },
@@ -81,7 +81,7 @@ const formacion:formationProps[] = [
 ];
 
 const datosDeInteres:string[] = [
-    'Acudiendo a la academia de inglés.',
+    'B2 de inglés ( APTIS ).',
     'Entorno propio y apto en casa para el teletrabajo.'
 ].sort();
 
@@ -89,7 +89,7 @@ const experiencia:experienciaProps[] = [
       {
         puesto:'Desarrollo web freelance ( MERN y MEAN )',
         inicio:2022,
-        periodo:'desde Septiembre',
+        periodo:'1 año y 7 meses',
         lugar:'',
         descripcion:'Proyectos personales, pequeños encargos y software mas allá de aprender una tecnología, aplicándola sobre ideas concretas.',
         side:false,
@@ -109,7 +109,7 @@ const experiencia:experienciaProps[] = [
         inicio:2017,
         periodo:'3 meses',
         lugar:'FEPAMIC',
-        descripcion:'Reparación, puesta a punto e implantación de equipos informáticos, redes y gagdets. Helpdesk y asistencia de personas con diversidad funcional.',
+        descripcion:'Reparación, puesta a punto e implantación de equipos informáticos y redes. Helpdesk y asistencia de personas con diversidad funcional.',
         side:false,
         customIndex:4
       },
@@ -118,7 +118,7 @@ const experiencia:experienciaProps[] = [
         inicio:2014,
         periodo:'3 meses',
         lugar:'Afocor',
-        descripcion:'Reparación, puesta a punto e implantación de equipos informáticos, redes y gagdets. Montaje y mantenimiento de aulas de informática.',
+        descripcion:'Reparación, puesta a punto e implantación de equipos informáticos y redes. Montaje y mantenimiento de aulas de informática.',
         side:false,
         customIndex:5
       }
